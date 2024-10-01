@@ -22,7 +22,7 @@ const Blog = () => {
           <a
             href="#"
             className="flex flex-col gap-4 rounded-md [grid-area:1/1/4/2] lg:pr-8"
-            data-aos="fade-up-right"
+            data-aos="fade-up"
             data-aos-duration="2000"
           >
             <img
@@ -50,7 +50,7 @@ const Blog = () => {
             <a
               href="#"
               className="flex flex-col pb-5 lg:mb-3 lg:flex-row lg:border-b lg:border-gray-300"
-              data-aos="fade-up-left"
+              data-aos="fade-up"
               data-aos-duration="2000"
             >
               <img
@@ -79,7 +79,7 @@ const Blog = () => {
             <a
               href="#"
               className="flex flex-col pb-5 lg:mb-3 lg:flex-row lg:border-b lg:border-gray-300"
-              data-aos="fade-up-left"
+              data-aos="fade-up"
               data-aos-duration="3000"
             >
               <img
@@ -108,7 +108,7 @@ const Blog = () => {
             <a
               href="#"
               className="flex flex-col pb-5 lg:mb-3 lg:flex-row lg:border-b lg:border-gray-300"
-              data-aos="fade-up-left"
+              data-aos="fade-up"
               data-aos-duration="4000"
             >
               <img
