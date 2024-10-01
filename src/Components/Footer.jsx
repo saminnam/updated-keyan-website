@@ -47,9 +47,9 @@ const Footer = () => {
               </li>
 
               <li>
-                <Link to={"/portfolio"}>
+                <Link to={"/portfolios"}>
                   <a
-                    href="/portfolio"
+                    href="/portfolios"
                     title=""
                     class="flex text-sm text-white transition-all duration-200 hover:text-orange-600 focus:text-orange-600"
                   >
