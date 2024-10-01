@@ -133,24 +133,43 @@ const Navbar = () => {
               isMobileMenuOpen ? "translate-x-0" : "-translate-x-full"
             }`}
           >
-            <a href="#" className="font-inter px-4 py-2 hover:text-[#ff7222]">
-              HOME
-            </a>
-            <a href="#" className="font-inter px-4 py-2 hover:text-[#ff7222]">
-              ABOUT
-            </a>
-            <a href="#" className="font-inter px-4 py-2 hover:text-[#ff7222]">
-              SERVICES
-            </a>
-            <a href="#" className="font-inter px-4 py-2 hover:text-[#ff7222]">
-              PORTFOLIO
-            </a>
-            <a href="#" className="font-inter px-4 py-2 hover:text-[#ff7222]">
-              BLOG
-            </a>
-            <a href="#" className="font-inter px-4 py-2 hover:text-[#ff7222]">
-              Login
-            </a>
+            <Link to={"/"}>
+              <a href="/" className="font-inter px-4 py-2 hover:text-[#ff7222]">
+                HOME
+              </a>
+            </Link>
+            <Link to={"/about"}>
+              <a
+                href="/about"
+                className="font-inter px-4 py-2 hover:text-[#ff7222]"
+              >
+                ABOUT
+              </a>
+            </Link>
+            <Link to={"/servicesf"}>
+              <a
+                href="/services"
+                className="font-inter px-4 py-2 hover:text-[#ff7222]"
+              >
+                SERVICES
+              </a>
+            </Link>
+            <Link to={"/portfolios"}>
+              <a
+                href="/portfolios"
+                className="font-inter px-4 py-2 hover:text-[#ff7222]"
+              >
+                PORTFOLIO
+              </a>
+            </Link>
+            <Link to={"/blogs"}>
+              <a
+                href="/blogs"
+                className="font-inter px-4 py-2 hover:text-[#ff7222]"
+              >
+                BLOG
+              </a>
+            </Link>
           </div>
         </div>
       </nav>
