@@ -48,7 +48,7 @@ const AboutPage = () => {
 
               <div
                 className="flex flex-col items-center justify-center xl:px-16"
-                data-aos="fade-down-left"
+                data-aos="fade-down"
                 data-aos-duration="2000"
               >
                 <h2 className="text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl">
@@ -125,7 +125,7 @@ const AboutPage = () => {
                 </div>
                 <div
                   className="ml-6"
-                  data-aos="fade-down-left"
+                  data-aos="fade-down"
                   data-aos-duration="2000"
                 >
                   <h3 className="text-lg font-semibold text-black">
@@ -168,7 +168,7 @@ const AboutPage = () => {
                 </div>
                 <div
                   className="ml-6"
-                  data-aos="fade-down-left"
+                  data-aos="fade-down"
                   data-aos-duration="2000"
                 >
                   <h3 className="text-lg font-semibold text-black">
@@ -213,7 +213,7 @@ const AboutPage = () => {
                 </div>
                 <div
                   className="ml-6"
-                  data-aos="fade-down-left"
+                  data-aos="fade-down"
                   data-aos-duration="2000"
                 >
                   <h3 className="text-lg font-semibold text-black">
