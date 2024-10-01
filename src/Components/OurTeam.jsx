@@ -3,13 +3,27 @@ import React from "react";
 const OurTeam = () => {
   return (
     <section className="my-10">
-      <h1 className="text-center text-4xl font-bold font-serif ">Our Team</h1>
-      <p className="text-center">
-        Meet the innovative minds driving our software solutions forward.
-      </p>
+      <div className="flex items-center justify-center flex-col gap-6">
+        <h2
+          className="text-3xl font-bold font-serif md:text-5xl font-serif"
+          data-aos="flip-down"
+          data-aos-duration="2000"
+        >
+          Our Team
+        </h2>
+        <div className=" w-[160px] h-[5px] bg-[#ff7222] rounded"></div>
+        <p className="text-center">
+          Meet the innovative minds driving our software solutions forward.
+        </p>
+      </div>
       <div className="flex items-center flex-wrap justify-center gap-20 mt-12">
         <div>
-          <div class="card_team">
+          <div
+            class="card_team"
+            data-aos="fade-up"
+            data-aos-easing="linear"
+            data-aos-duration="1500"
+          >
             <button class="mail">
               <svg
                 class="lucide lucide-mail"
@@ -28,7 +42,10 @@ const OurTeam = () => {
               </svg>
             </button>
             <div class="profile-pic">
-              <img src="https://i.pinimg.com/564x/2f/57/8d/2f578d07945132849b05fbdaf78cba38.jpg" alt=""/>
+              <img
+                src="https://i.pinimg.com/564x/2f/57/8d/2f578d07945132849b05fbdaf78cba38.jpg"
+                alt=""
+              />
             </div>
             <div class="bottom">
               <div class="content">
@@ -66,7 +83,12 @@ const OurTeam = () => {
           </div>
         </div>
         <div>
-          <div class="card_team">
+          <div
+            class="card_team"
+            data-aos="fade-up"
+            data-aos-easing="linear"
+            data-aos-duration="2000"
+          >
             <button class="mail">
               <svg
                 class="lucide lucide-mail"
@@ -85,7 +107,10 @@ const OurTeam = () => {
               </svg>
             </button>
             <div class="profile-pic">
-                <img src="https://i.pinimg.com/564x/8a/33/fc/8a33fce4cae89181689769de9f763c58.jpg" alt="" />
+              <img
+                src="https://i.pinimg.com/564x/8a/33/fc/8a33fce4cae89181689769de9f763c58.jpg"
+                alt=""
+              />
             </div>
             <div class="bottom">
               <div class="content">
@@ -123,7 +148,12 @@ const OurTeam = () => {
           </div>
         </div>
         <div>
-          <div class="card_team">
+          <div
+            class="card_team"
+            data-aos="fade-up"
+            data-aos-easing="linear"
+            data-aos-duration="2500"
+          >
             <button class="mail">
               <svg
                 class="lucide lucide-mail"
@@ -142,7 +172,10 @@ const OurTeam = () => {
               </svg>
             </button>
             <div class="profile-pic">
-                <img src="https://i.pinimg.com/564x/dc/1a/82/dc1a82df854681cfe94098fa6e17e481.jpg" alt="" />
+              <img
+                src="https://i.pinimg.com/564x/dc/1a/82/dc1a82df854681cfe94098fa6e17e481.jpg"
+                alt=""
+              />
             </div>
             <div class="bottom">
               <div class="content">

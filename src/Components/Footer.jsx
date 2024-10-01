@@ -9,7 +9,7 @@ const Footer = () => {
             <div class="col-span-2 md:col-span-4 xl:pr-8">
                 <img class="w-[180px]" src={logowhite} alt="" />
 
-                <p class="text-base leading-relaxed text-white mt-7">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
+                <p class="text-base leading-relaxed text-white mt-7">Building the Future of Technology, One Line of Code at a Time. Custom Software Solutions that Drive Results.</p>
             </div>
 
             <div class="lg:col-span-2">
@@ -79,32 +79,15 @@ const Footer = () => {
             </div>
 
             <div class="lg:col-span-2">
-                <p class="text-base font-semibold text-white">Extra Links</p>
-
-                <ul class="mt-6 space-y-5">
-                    <li>
-                        <a href="#" title="" class="flex text-sm text-white transition-all duration-200 hover:text-orange-600 focus:text-orange-600"> Customer Support </a>
-                    </li>
-
-                    <li>
-                        <a href="#" title="" class="flex text-sm text-white transition-all duration-200 hover:text-orange-600 focus:text-orange-600"> Delivery Details </a>
-                    </li>
-
-                    <li>
-                        <a href="#" title="" class="flex text-sm text-white transition-all duration-200 hover:text-orange-600 focus:text-orange-600"> Terms & Conditions </a>
-                    </li>
-
-                    <li>
-                        <a href="#" title="" class="flex text-sm text-white transition-all duration-200 hover:text-orange-600 focus:text-orange-600"> Privacy Policy </a>
-                    </li>
-                </ul>
+                <p class="text-base font-semibold text-white">Subscribe</p>
+                <p className='text-white mt-3'>Follow Our News Letter To Stay Updated</p>                
             </div>
         </div>
 
         <hr class="mt-16 mb-10 border-gray-200" />
 
         <div class="sm:flex sm:items-center sm:justify-between">
-            <p class="text-sm text-white">© Copyright 2021, All Rights Reserved by Postcraft</p>
+            <p class="text-sm text-white">© Copyright 2024, All Rights Reserved</p>
 
             <ul class="flex items-center mt-5 space-x-3 md:order-3 sm:mt-0">
                 <li>

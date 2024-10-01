@@ -4,15 +4,16 @@ const WhyChooseUs = () => {
   // Array of services
   const services = [
     {
+      title: "Skilled Professionals",
+      description:
+        " Our team of skilled professionals is committed to providing top-notch software solutions tailored to meet your business goals and drive exceptional results.",
+    },
+    {
       title: "Product Design",
       description:
         "Our team of expert designers works tirelessly to create visually stunning and user-friendly website designs that capture the essence of your brand.",
     },
-    {
-      title: "Development",
-      description:
-        "We leverage cutting-edge technologies to develop high-performance web applications that are scalable, secure, and tailored to your business needs.",
-    },
+   
     {
       title: "Product Testing",
       description:
@@ -31,7 +32,13 @@ const WhyChooseUs = () => {
         <div className="px-6 py-6 lg:px-20 lg:py-4">
           <div className="flex flex-col items-center text-center gap-5">
             <div className="flex items-center justify-center flex-col gap-6">
-              <h2 className="text-3xl font-bold md:text-5xl">Why Choose Us?</h2>
+              <h2
+                className="text-3xl font-serif font-bold md:text-5xl"
+                data-aos="flip-down"
+                data-aos-duration="2000"
+              >
+                Why Choose Us?
+              </h2>
               <div className="w-[180px] h-[5px] bg-[#ff7222] rounded"></div>
             </div>
 
@@ -48,6 +55,8 @@ const WhyChooseUs = () => {
               <div
                 key={index}
                 className="border-[1px] choose_card border-solid border-gray-200 w-[320px] h-auto p-10 flex flex-col gap-8 hover:shadow-lg"
+                data-aos="fade-up"
+                data-aos-duration="2000"
               >
                 <h2 className="text-2xl font-bold">{service.title}</h2>
                 <p className="text-lg text-gray-500">{service.description}</p>

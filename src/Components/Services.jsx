@@ -6,17 +6,32 @@ const Services = () => {
     {
       title: "WEB DEVELOPMENT",
       description:
-        "In today's digital landscape, a strong online presence is crucial for success. Our web development services focus on creating responsive, user-friendly websites tailored to your business needs.",
+        "Boost Your Website’s Performance with Our Expert Web Development Services. Unlock the full potential of your website with our skilled web development team. ",
     },
     {
       title: "APP DEVELOPMENT",
       description:
-        "We specialize in building innovative mobile applications that deliver exceptional user experiences. Our team combines creativity and technical expertise to create apps tailored to your business goals.",
+        "Turn Your Business Idea into a High-Performing Mobile App with Our Expert App Developers. Bring your business vision to life with a custom mobile app designed by our experienced developers.",
+    },
+    {
+      title: "SOFTWARE DEVELOPMENT",
+      description:
+        "Create Visually Stunning, User-Friendly Websites with Our Web Design Services. Elevate your online presence with our expert web design services. ",
     },
     {
       title: "WEB DESIGN",
       description:
-        "Our web design services focus on creating visually stunning and user-friendly websites. We prioritize aesthetics and functionality to ensure your online presence captivates visitors.",
+        "Build Captivating, User-Friendly Websites with Our Professional Web Design Services. Our web design services are tailored to create visually stunning, responsive websites that prioritize both aesthetics and functionality.",
+    },
+    {
+      title: "E-COMMERCE SOLUTIONS",
+      description:
+        "Our e-commerce solutions help you build powerful online stores with seamless payment integration, user-friendly designs, and robust product management. Let us help you drive sales and grow your business with a custom e-commerce website.",
+    },
+    {
+      title: "TECHNICAL CONSULTING",
+      description:
+        "Our technical consulting services provide tailored guidance to optimize your IT infrastructure and implement scalable solutions, ensuring enhanced performance and reduced costs. Partner with us to navigate the digital landscape and accelerate your transformation for sustainable growth.",
     },
   ];
 
@@ -27,13 +42,16 @@ const Services = () => {
         {/* Title */}
         <div className="flex flex-col items-center text-center gap-5">
           <div className="flex items-center justify-center flex-col gap-3">
-            <h2 className="text-3xl font-bold md:text-5xl">Our Services</h2>
+            <h2 className="text-3xl font-bold font-serif md:text-5xl" data-aos="flip-down">
+              Our Services
+            </h2>
             <div className="w-[180px] h-[5px] bg-[#ff7222] rounded"></div>
           </div>
 
           <p className="mb-8 mt-4 max-w-xl text-base text-gray-500 md:mb-12 md:text-lg lg:mb-16">
-            Lorem ipsum dolor sit amet consectetur adipiscing elit ut aliquam,
-            purus sit amet luctus magna fringilla urna
+            We offer a comprehensive range of software solutions, including
+            custom software development, mobile app development, and web
+            development, tailored to meet your business needs.
           </p>
         </div>
         {/* Features Content */}
@@ -41,11 +59,14 @@ const Services = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className="grid gap-6 text-center card_service shadow-lg border-solid text-black transition ease-linear"
+              className="grid gap-6 rounded-lg hover:border-[#ff7222] border-[3px] hover:rounded-xl hover:scale-90 text-center card_service shadow-lg border-solid text-black transition ease-linear"
+              data-aos="fade-up"
             >
               <div className="card2_service p-8 md:p-10 rounded-md">
                 <h3 className="text-xl font-bold">{service.title}</h3>
-                <p className="text-md mt-5">{service.description}</p>
+                <p className="text-md mt-5 text-justify">
+                  {service.description}
+                </p>
               </div>
             </div>
           ))}

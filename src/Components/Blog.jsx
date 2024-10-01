@@ -6,9 +6,14 @@ const Blog = () => {
       {/* Container */}
       <div className="mx-auto w-full max-w-7xl px-5 py-16 md:px-10 md:py-20">
         {/* Title */}
-        <h2 className="text-center text-3xl font-bold md:text-5xl lg:text-left">
+        <h2
+          className="text-center text-3xl font-serif font-bold md:text-5xl lg:text-left"
+          data-aos="flip-down"
+          data-aos-duration="2000"
+        >
           The latest and greatest news
         </h2>
+        <div className="mt-5 w-[300px] h-[5px] bg-[#ff7222] rounded"></div>
         <p className="mb-8 mt-4 text-center text-sm text-gray-500 sm:text-base md:mb-12 lg:mb-16 lg:text-left">
           Lorem ipsum dolor sit amet elit ut aliquam
         </p>
@@ -17,6 +22,8 @@ const Blog = () => {
           <a
             href="#"
             className="flex flex-col gap-4 rounded-md [grid-area:1/1/4/2] lg:pr-8"
+            data-aos="fade-up-right"
+            data-aos-duration="2000"
           >
             <img
               src="https://i.pinimg.com/564x/f2/6b/fc/f26bfc9c7bdb5ca1c6a787f1b4cc4d77.jpg"
@@ -43,6 +50,8 @@ const Blog = () => {
             <a
               href="#"
               className="flex flex-col pb-5 lg:mb-3 lg:flex-row lg:border-b lg:border-gray-300"
+              data-aos="fade-up-left"
+              data-aos-duration="2000"
             >
               <img
                 src="https://i.pinimg.com/736x/da/90/6d/da906dbc9d3b5c8945b3bd507173300d.jpg"
@@ -70,6 +79,8 @@ const Blog = () => {
             <a
               href="#"
               className="flex flex-col pb-5 lg:mb-3 lg:flex-row lg:border-b lg:border-gray-300"
+              data-aos="fade-up-left"
+              data-aos-duration="3000"
             >
               <img
                 src="https://i.pinimg.com/564x/57/58/b6/5758b6667aa24cc4f6aabfef472a0a0c.jpg"
@@ -97,6 +108,8 @@ const Blog = () => {
             <a
               href="#"
               className="flex flex-col pb-5 lg:mb-3 lg:flex-row lg:border-b lg:border-gray-300"
+              data-aos="fade-up-left"
+              data-aos-duration="4000"
             >
               <img
                 src="https://i.pinimg.com/564x/79/0f/30/790f30d30a937ac74d95eef8df66dcb6.jpg"

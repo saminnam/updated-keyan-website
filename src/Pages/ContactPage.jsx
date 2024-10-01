@@ -13,11 +13,11 @@ const ContactPage = () => {
             <div className="max-w-3xl">
               {/* Title */}
               <h2 className="mb-2 text-3xl font-bold md:text-5xl">
-                Let's build something exciting together!
+                Ready to take your business to the next level?
               </h2>
               <p className="my-4 max-w-lg pb-4 text-sm text-gray-500 sm:text-base md:mb-6 lg:mb-8">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit ut
-                aliquam, purus sit amet luctus venenatis, lectus
+                Contact us today to discuss your project and discover how our
+                software solutions can drive your success.
               </p>
               {/* Testimonial */}
 
@@ -33,12 +33,11 @@ const ContactPage = () => {
               </div>
             </div>
             <div className="mx-auto max-w-xl p-8 text-center rounded-lg shadow-lg shadow-gray-400">
-              <h3 className="text-2xl font-bold md:text-3xl">
+              <h3 className="text-2xl font-bold md:text-3xl font-serif">
                 Feel free to contact
               </h3>
               <p className="mx-auto mb-6 mt-4 max-w-lg text-sm text-gray-500 lg:mb-8">
-                Lorem ipsum dolor sit amet consectetur adipiscing elit ut
-                aliquam, purus sit amet luctus magna fringilla urna
+              Are you prepared to elevate your business to new heights? Reach out to us today.
               </p>
               {/* Form */}
               <form

@@ -63,7 +63,13 @@ const PortfolioPage = () => {
         <div className="mx-auto w-full max-w-7xl px-5 py-16 md:px-10 md:py-20">
           {/* Title */}
           <div className="flex items-center justify-center flex-col gap-3">
-            <h2 className="text-3xl font-bold font-serif md:text-5xl">Our Projects</h2>
+            <h2
+              className="text-3xl font-bold font-serif md:text-5xl"
+              data-aos="flip-down"
+              data-aos-duration="2000"
+            >
+              Our Projects
+            </h2>
             <div className="w-[180px] h-[5px] bg-[#ff7222] rounded"></div>
           </div>
           {/* Content */}
@@ -73,6 +79,9 @@ const PortfolioPage = () => {
                 key={project.id}
                 href={project.link}
                 className="flex flex-col rounded-md p-4 lg:p-2"
+                data-aos="fade-up"
+                data-aos-easing="linear"
+                data-aos-duration="1500"
               >
                 <img
                   src={project.imageUrl}
@@ -80,7 +89,9 @@ const PortfolioPage = () => {
                   className="mb-3 inline-block lg:h-60 w-full object-cover lg:w-96 rounded-lg"
                 />
                 <p className="mb-1 text-center font-bold">{project.name}</p>
-                <p className="text-center text-sm text-gray-500">{project.category}</p>
+                <p className="text-center text-sm text-gray-500">
+                  {project.category}
+                </p>
               </a>
             ))}
           </div>

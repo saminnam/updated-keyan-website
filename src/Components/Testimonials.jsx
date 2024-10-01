@@ -1,20 +1,20 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 
 const testimonialsData = [
   {
-    text: "Dignissim ullamcorper eu urna enim gravida sodales. Sceleisque orci semper vulputate nisi, laoreet scelerisque purus.",
+    text: "The team at Keyan Technologies exceeded our expectations with their custom software solutions. Their expertise and dedication transformed our operations, resulting in a 30% increase in productivity.",
     author: "David James",
     role: "CEO/Chairman",
     rating: 4,
   },
   {
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis risus eget urna mollis ornare vel eu leo.",
+    text: "Working with Keyan Technologies was a game-changer for us. Their technical consulting services helped streamline our IT infrastructure, reducing our operational costs significantly.",
     author: "Sarah Miller",
     role: "Marketing Head",
     rating: 5,
   },
   {
-    text: "Suspendisse potenti. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae.",
+    text: "The software solutions provided by Keyan Technologies were tailored perfectly to our needs. Their team's responsiveness and support throughout the development process were invaluable",
     author: "John Doe",
     role: "CTO",
     rating: 3,
@@ -49,10 +49,16 @@ const Testimonials = () => {
   return (
     <section>
       <div className="mx-auto flex flex-col gap-y-16 px-5 pb-20 sm:gap-y-20 md:px-10 relative">
-      <div className="flex items-center justify-center flex-col gap-6">
-              <h2 className="text-3xl font-bold md:text-5xl">Testimonials</h2>
-              <div className=" w-[160px] h-[5px] bg-[#ff7222] rounded"></div>
-            </div>
+        <div className="flex items-center justify-center flex-col gap-6">
+          <h2
+            className="text-3xl font-bold font-serif md:text-5xl"
+            data-aos="flip-down"
+            data-aos-duration="2000"
+          >
+            Testimonials
+          </h2>
+          <div className=" w-[160px] h-[5px] bg-[#ff7222] rounded"></div>
+        </div>
         <div className="p-6 text-center justify-center">
           <div className="flex mb-8 justify-center">
             {[...Array(testimonialInfo.rating)].map((_, i) => (
