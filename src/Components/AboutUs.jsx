@@ -73,7 +73,7 @@ const AboutUs = () => {
             src={wed_service}
             alt="Web Service"
             className="inline-block h-full rounded-lg w-full max-w-2xl"
-            data-aos="zoom-in-left"
+            data-aos="zoom-in"
             data-aos-duration="2000"
           />
         </div>
