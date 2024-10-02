@@ -1,7 +1,5 @@
-import React, { useState, useEffect } from "react";
-import logoblack from "../assets/keyan.png";
-import logowhite from "../assets/keyan-white.png";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from 'react';
+import logoblack from '../assets/keyan.png';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -10,85 +8,46 @@ const Navbar = () => {
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
-      setIsScrolled(scrollY > 0);
+      setIsScrolled(scrollY > 80);
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll);
 
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
   return (
     <section
-      className={`${
-        isScrolled
-          ? "fixed bg-white shadow-md text-black"
-          : "absolute bg-transparent text-white"
-      } inset-x-0 top-0 z-50 transition-all ease-linear`}
+      className={`sticky top-0 z-50 bg-white text-black transition-shadow duration-300 ${
+        isScrolled ? 'shadow-md' : ''
+      }`}
     >
       <nav className="font-inter mx-auto h-auto w-full max-w-screen-2xl lg:relative lg:top-0 bg-transparent">
         <div className="flex flex-col px-6 py-6 lg:flex-row lg:items-center lg:justify-between lg:px-20 lg:py-4">
-          <Link to={"/"}>
-            <a href="/">
-              {isScrolled ? (
-                <img src={logoblack} alt="Logo" className="w-[150px]" />
-              ) : (
-                <img src={logowhite} alt="Logo" className="w-[150px]" />
-              )}
-            </a>
-          </Link>
+          <a href="#">
+            <img src={logoblack} alt="" className="w-[150px]" />
+          </a>
           <div className="hidden lg:flex lg:flex-row lg:space-x-6">
-            <Link to={"/"}>
-              <a
-                href="/"
-                className="font-inter rounded-lg px-3 font-medium py-4 hover:text-[#ff7222]"
-              >
-                HOME
-              </a>
-            </Link>
-            <Link to={"/about"}>
-              <a
-                href="/about"
-                className="font-inter rounded-lg px-3 font-medium py-4 hover:text-[#ff7222]"
-                onClick={() => isScrolled(true)}
-              >
-                ABOUT
-              </a>
-            </Link>
-            <Link to={"/services"}>
-              <a
-                href="/services"
-                className="font-inter rounded-lg px-3 font-medium py-4 hover:text-[#ff7222]"
-              >
-                SERVICES
-              </a>
-            </Link>
-            <Link to={"/portfolios"}>
-              <a
-                href="/portfolios"
-                className="font-inter rounded-lg px-3 font-medium py-4 hover:text-[#ff7222]"
-              >
-                PORTFOLIO
-              </a>
-            </Link>
-            <Link to={"/blogs"}>
-              <a
-                href="/blogs"
-                className="font-inter rounded-lg px-3 font-medium py-4 hover:text-[#ff7222]"
-              >
-                BLOG
-              </a>
-            </Link>
-            <Link to={"/contact"}>
-              <a
-                href="/contact"
-                className="font-inter rounded-lg px-3 font-medium py-4 hover:text-[#ff7222]"
-              >
-                CONTACT
-              </a>
-            </Link>
+            <a href="/" className="font-inter font-medium active:text-[#ff7222] rounded-lg px-3 py-4 hover:text-[#ff7222]">
+              HOME
+            </a>
+            <a href="/about" className="font-inter font-medium active:text-[#ff7222] rounded-lg px-3 py-4 hover:text-[#ff7222]">
+              ABOUT
+            </a>
+            <a href="/services" className="font-inter font-medium active:text-[#ff7222] rounded-lg px-3 py-4 hover:text-[#ff7222]">
+              SERVICES
+            </a>
+            <a href="/portfolios" className="font-inter font-medium active:text-[#ff7222] rounded-lg px-3 py-4 hover:text-[#ff7222]">
+              PORTFOLIO
+            </a>
+            <a href="/blogs" className="font-inter font-medium active:text-[#ff7222] rounded-lg px-3 py-4 hover:text-[#ff7222]">
+              BLOG
+            </a>
+            <a href="/contact" className="font-inter font-medium active:text-[#ff7222] rounded-lg px-3 py-4 hover:text-[#ff7222]">
+              CONTACT
+            </a>
           </div>
 
           {/* Mobile menu toggle */}
@@ -130,46 +89,27 @@ const Navbar = () => {
 
           <div
             className={`lg:hidden flex flex-col items-center justify-center text-black gap-3 bg-white w-full h-auto py-7 fixed top-16 left-0 transition-transform duration-500 ${
-              isMobileMenuOpen ? "translate-x-0" : "-translate-x-full"
+              isMobileMenuOpen ? 'translate-x-0' : '-translate-x-full'
             }`}
           >
-            <Link to={"/"}>
-              <a href="/" className="font-inter px-4 py-2 hover:text-[#ff7222]">
-                HOME
-              </a>
-            </Link>
-            <Link to={"/about"}>
-              <a
-                href="/about"
-                className="font-inter px-4 py-2 hover:text-[#ff7222]"
-              >
-                ABOUT
-              </a>
-            </Link>
-            <Link to={"/servicesf"}>
-              <a
-                href="/services"
-                className="font-inter px-4 py-2 hover:text-[#ff7222]"
-              >
-                SERVICES
-              </a>
-            </Link>
-            <Link to={"/portfolios"}>
-              <a
-                href="/portfolios"
-                className="font-inter px-4 py-2 hover:text-[#ff7222]"
-              >
-                PORTFOLIO
-              </a>
-            </Link>
-            <Link to={"/blogs"}>
-              <a
-                href="/blogs"
-                className="font-inter px-4 py-2 hover:text-[#ff7222]"
-              >
-                BLOG
-              </a>
-            </Link>
+            <a href="#" className="font-inter px-4 py-2 hover:text-[#ff7222]">
+              HOME
+            </a>
+            <a href="#" className="font-inter px-4 py-2 hover:text-[#ff7222]">
+              ABOUT
+            </a>
+            <a href="#" className="font-inter px-4 py-2 hover:text-[#ff7222]">
+              SERVICES
+            </a>
+            <a href="#" className="font-inter px-4 py-2 hover:text-[#ff7222]">
+              PORTFOLIO
+            </a>
+            <a href="#" className="font-inter px-4 py-2 hover:text-[#ff7222]">
+              BLOG
+            </a>
+            <a href="#" className="font-inter px-4 py-2 hover:text-[#ff7222]">
+              CONTACT
+            </a>
           </div>
         </div>
       </nav>

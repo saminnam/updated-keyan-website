@@ -5,7 +5,7 @@ const OurTeam = () => {
     <section className="my-10">
       <div className="flex items-center justify-center flex-col gap-6">
         <h2
-          className="text-3xl font-bold font-serif md:text-5xl font-serif"
+          className="text-3xl font-bold md:text-5xl font-serif"
           data-aos="flip-down"
           data-aos-duration="2000"
         >
@@ -87,7 +87,7 @@ const OurTeam = () => {
             class="card_team"
             data-aos="fade-up"
             data-aos-easing="linear"
-            data-aos-duration="2000"
+            data-aos-duration="1500"
           >
             <button class="mail">
               <svg
@@ -152,7 +152,7 @@ const OurTeam = () => {
             class="card_team"
             data-aos="fade-up"
             data-aos-easing="linear"
-            data-aos-duration="2500"
+            data-aos-duration="1500"
           >
             <button class="mail">
               <svg
