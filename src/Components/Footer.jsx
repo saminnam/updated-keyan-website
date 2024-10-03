@@ -8,7 +8,9 @@ const Footer = () => {
       <div class="px-4 mx-auto lg:px-20 w-full max-w-screen-2xl">
         <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-12 gap-y-12 gap-x-8 xl:gap-x-12">
           <div class="col-span-2 md:col-span-4 xl:pr-8">
-            <img class="w-[180px]" src={logowhite} alt="" />
+            <a href="/">
+              <img class="w-[180px]" src={logowhite} alt="" />
+            </a>
 
             <p class="text-base leading-relaxed text-white mt-7">
               Building the Future of Technology, One Line of Code at a Time.

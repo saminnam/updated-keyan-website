@@ -29,10 +29,10 @@ const Hero = () => {
         <div className="mx-auto mt-10 w-full max-w-7xl px-5 py-16 md:px-10 md:py-20 relative">
           <div className="mx-auto max-w-3xl text-center">
             {/* Title */}
-            <h1 className="mb-4 text-4xl font-bold md:text-6xl" data-aos="fade-up">
+            <h1 className="mb-4 text-4xl font-bold md:text-6xl" data-aos="fade-down">
               Build Your Digital Presence with Keyan Technology
             </h1>
-            <p className="mb-6 text-sm text-gray-500 sm:text-xl lg:mb-8" data-aos="fade-up">
+            <p className="mb-6 text-sm text-gray-500 sm:text-xl lg:mb-8" data-aos="fade-down">
               Keyan Technology offers cutting-edge web and app development
               solutions tailored to your business needs.
             </p>

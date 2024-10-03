@@ -26,7 +26,7 @@ const Navbar = () => {
     >
       <nav className="font-inter mx-auto h-auto w-full max-w-screen-2xl lg:relative lg:top-0 bg-transparent">
         <div className="flex flex-col px-6 py-6 lg:flex-row lg:items-center lg:justify-between lg:px-20 lg:py-4">
-          <a href="#">
+          <a href="/">
             <img src={logoblack} alt="" className="w-[150px]" />
           </a>
           <div className="hidden lg:flex lg:flex-row lg:space-x-6">
