@@ -1,173 +1,297 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import CommonHero from "../Components/CommonHero";
+import AOS from "aos";
+import tag from '../assets/tag.png';
 
 const ServicePage = () => {
+  // State to keep track of which FAQ is open and selected service
+  const [openFAQ, setOpenFAQ] = useState(null);
+  const [selectedService, setSelectedService] = useState("Web Development"); // Initial selected service
+
+  // Function to toggle FAQ open/close
+  const toggleFAQ = (index) => {
+    setOpenFAQ(openFAQ === index ? null : index);
+  };
+
+  // Function to change the content based on selected service
+
+  const handleServiceClick = (service) => {
+    setSelectedService(service);
+  };
+
+  // useEffect hook to initialize AOS on component mount
+  useEffect(() => {
+    AOS.init({ duration: 2000, once: true });
+  }, []);
+
+  // useEffect hook to refresh AOS when selectedService changes
+  useEffect(() => {
+    AOS.refresh(); // Refresh AOS after every update
+  }, [selectedService]);
+  // List of FAQs
+  const faqs = [
+    {
+      question: "What technologies do you use for web development?",
+      answer:
+        "We leverage cutting-edge technologies such as React, Angular, Node.js, and Laravel to create robust, scalable web applications. Our tech stack is designed to maximize performance, enhance user experience, and future-proof your business.",
+    },
+    {
+      question: "Can you develop mobile apps for both iOS and Android?",
+      answer:
+        "Absolutely! Our team specializes in developing native and cross-platform apps using frameworks like Flutter and React Native, ensuring seamless performance on both iOS and Android devices.",
+    },
+    {
+      question: "Do you offer custom software development services?",
+      answer:
+        "Yes, we excel in building custom software solutions that are tailored to meet your business requirements. Our software is designed for scalability, reliability, and efficiency, solving your unique challenges with innovative approaches.",
+    },
+    {
+      question: "What graphic design services do you provide?",
+      answer:
+        "Our design team delivers exceptional graphic design services, including logo design, full-scale branding, UI/UX design, and marketing collateral. We create designs that visually communicate your brand's identity and values effectively.",
+    },
+  ];
+
+  // Content for each service
+  const serviceContent = {
+    "Web Development": {
+      title: "Web Development",
+      description1:
+        "Our web development team is dedicated to creating visually stunning, fully responsive websites that adapt seamlessly across all devices. We focus on performance optimization, security features, and crafting engaging user experiences that convert visitors into customers.",
+      description2:
+        "Whether you need an e-commerce platform, a content-rich website, or a complex web application, we deliver solutions aligned with your business objectives. Our expertise in cutting-edge web technologies ensures your website will stand out in today's competitive digital landscape.",
+      image:
+        "https://i.pinimg.com/736x/22/bc/8e/22bc8ebef610eb881071e1a7007a7a80.jpg",
+    },
+    "Software Development": {
+      title: "Software Development",
+      description1:
+        "We build high-performance, scalable software solutions designed to optimize workflows and solve complex business challenges. Our approach to custom software development is rooted in deep technical expertise, strategic vision, and a focus on results.",
+      description2:
+        "From enterprise-grade applications to cloud-based solutions, we deliver software that enhances productivity and drives growth. Our agile development process ensures flexibility and rapid deployment, while maintaining the highest standards of quality.",
+      image:
+        "https://i.pinimg.com/564x/a6/83/15/a68315f072dd25f4c2d3410bf486b6f2.jpg",
+    },
+    "App Development": {
+      title: "App Development",
+      description1:
+        "Our app development services go beyond creating functional apps – we craft mobile experiences that users love. We prioritize intuitive design, fluid interactions, and top-notch performance across both iOS and Android platforms.",
+      description2:
+        "Whether you're looking to launch a new app or optimize an existing one, we ensure that your mobile presence is aligned with your business goals and delivers a delightful user experience.",
+      image:
+        "https://i.pinimg.com/564x/02/52/e3/0252e3a3282f752ab9c0e97400eb7778.jpg",
+    },
+    "Graphic Designing": {
+      title: "Graphic Designing",
+      description1:
+        "Our graphic design services are crafted to elevate your brand's visual identity. From creating standout logos to comprehensive branding, our team combines creativity with strategic thinking to ensure your brand resonates with your audience.",
+      description2:
+        "Whether it's through digital media, print, or packaging, we ensure your brand is consistently represented across all platforms with stunning visuals that capture attention and communicate your message clearly.",
+      image:
+        "https://i.pinimg.com/564x/14/5d/7e/145d7e2842bff5b01d3308603fe75d05.jpg",
+    },
+  };
+
   return (
     <>
       <section>
         <CommonHero title={"SERVICES"} />
-        <section className="py-12">
-          {/* Container */}
-          <div className="mx-auto flex w-full max-w-7xl flex-col items-center justify-center px-5 py-16 md:px-10 md:py-20">
-            {/* HEADING TEXT */}
-            <p className="font-inter mb-2 text-center text-sm font-medium">
-              3 EASY STEPS
-            </p>
-            <h1 className="text-center text-3xl font-bold lg:text-4xl">
-              How it works
-            </h1>
-            <p className="font-inter mx-auto mb-12 mt-4 max-w-lg px-5 text-center text-base font-light text-gray-500">
-              Standard Work Process
-            </p>
-            {/* HOW IT WORKS STEPS */}
-            <div className="flex flex-col items-start justify-center lg:flex-row">
-              {/* BLOCK */}
-              <div className="relative my-8 flex w-full rounded-md lg:mx-8 lg:flex-col">
-                <div className="flex h-16 w-16 items-center justify-center rounded-md bg-gray-200">
-                  <h2 className="text-3xl font-medium">1</h2>
+        <div className="mx-auto w-full max-w-screen-2xl px-5 py-16 lg:px-20 md:py-20">
+          <div className="flex justify-between lg:flex-row flex-col lg:gap-0 gap-24">
+            {/* Service List */}
+            <div className="">
+              {/* Ensure this parent container has enough height for sticky to work */}
+              <div className="sticky top-24 flex flex-col gap-12">
+                <div className="lg:w-[450px] w-full text-[#ff7222] shadow-xl flex flex-col items-center justify-center gap-7 py-20 px-14 rounded-md">
+                  {Object.keys(serviceContent).map((service) => (
+                    <div
+                      key={service}
+                      onClick={() => handleServiceClick(service)}
+                      className={`group cursor-pointer text-lg font-medium hover:bg-[#ff7222] hover:text-white transition ease-in-out border-[#ff7222] border-[2px] py-4 w-full rounded-md flex justify-between px-5 items-center ${
+                        selectedService === service
+                          ? "bg-[#ff7222] text-white"
+                          : ""
+                      }`}
+                    >
+                      {service}
+                      <i className="bi bi-arrow-up-right transition duration-1000 group-hover:translate-x-4"></i>
+                    </div>
+                  ))}
                 </div>
-                <div className="ml-6 lg:ml-0">
-                  <h2 className="mb-5 text-xl font-medium lg:mt-8">
-                    Requirement Analysis
-                  </h2>
-                  <p className="font-inter max-w-md pr-5 text-base text-gray-500">
-                    We thoroughly analyze your needs and objectives to
-                    understand your vision for the website.
-                  </p>
+                <div className="flex flex-col lg:w-[450px] w-full bg-slate-200 items-center gap-8 py-20 px-28 text-center rounded-md">
+                  {/* <h3 className="text-4xl font-medium">
+                    Best Quality Services
+                  </h3> */}
+                  <img src={tag} alt="" />
+                  <div className="flex flex-col items-center gap-1">
+                    <p className="text-xl font-medium">Call Us Anytime</p>
+                    <h4 className="text-2xl font-medium"><i class="bi bi-telephone"></i> +91 98402 34475</h4>
+                  </div>
                 </div>
-                {/* MOBILE - HOW IT WORKS LINE */}
-                  <svg
-                    className="absolute -bottom-[48px] left-[28px] lg:hidden"
-                    width="12"
-                    height="70"
-                    viewBox="0 0 12 95"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M6 0.226497L0.226497 6L6 11.7735L11.7735 6L6 0.226497ZM6 94.7735L11.7735 89L6 83.2265L0.226497 89L6 94.7735ZM5 6V10.15H7V6H5ZM5 18.45V26.75H7L7 18.45H5ZM5 35.05L5 43.35H7V35.05H5ZM5 51.65L5 59.95H7L7 51.65H5ZM5 68.25L5 76.55H7L7 68.25H5ZM5 84.85L5 89H7V84.85H5Z"
-                      fill="black"
-                    ></path>
-                  </svg>
-                  {/* DESKTOP - HOW IT WORKS LINE */}
-                  <svg
-                    className="absolute right-0 top-7 hidden lg:block"
-                    width="170"
-                    height="12"
-                    viewBox="0 0 170 12"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M0.226497 6L6 11.7735L11.7735 6L6 0.226497L0.226497 6ZM169.773 6L164 0.226497L158.227 6L164 11.7735L169.773 6ZM6 7H9.95V5H6V7ZM17.85 7H25.75V5H17.85V7ZM33.65 7H41.55V5H33.65V7ZM49.45 7H57.35V5H49.45V7ZM65.25 7H73.15V5H65.25V7ZM81.05 7H88.95V5H81.05V7ZM96.85 7H104.75V5H96.85V7ZM112.65 7H120.55V5H112.65V7ZM128.45 7H136.35V5H128.45V7ZM144.25 7H152.15V5H144.25V7ZM160.05 7H164V5H160.05V7Z"
-                      fill="black"
-                    />
-                  </svg>
               </div>
-              {/* BLOCK */}
-              <div className="relative my-8 flex w-full rounded-md lg:mx-8 lg:flex-col">
-                <div className="flex h-16 w-16 items-center justify-center rounded-md bg-gray-200">
-                  <h2 className="text-3xl font-medium">2</h2>
-                </div>
-                <div className="ml-6 lg:ml-0">
-                  <h2 className="mb-5 text-xl font-medium lg:mt-8">
-                    Design Concept
-                  </h2>
-                  <p className="font-inter max-w-md pr-5 text-base text-gray-500">
-                    Our team conceptualizes the website design, focusing on
-                    aesthetics, functionality, and user experience.
-                  </p>
-                </div>
-                {/* MOBILE - HOW IT WORKS LINE */}
-                <svg
-                  className="absolute -bottom-[48px] left-[28px] lg:hidden"
-                  width="12"
-                  height="70"
-                  viewBox="0 0 12 95"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M6 0.226497L0.226497 6L6 11.7735L11.7735 6L6 0.226497ZM6 94.7735L11.7735 89L6 83.2265L0.226497 89L6 94.7735ZM5 6V10.15H7V6H5ZM5 18.45V26.75H7L7 18.45H5ZM5 35.05L5 43.35H7V35.05H5ZM5 51.65L5 59.95H7L7 51.65H5ZM5 68.25L5 76.55H7L7 68.25H5ZM5 84.85L5 89H7V84.85H5Z"
-                    fill="black"
-                  ></path>
-                </svg>
-                {/* DESKTOP - HOW IT WORKS LINE */}
-                <svg
-                  className="absolute right-0 top-7 hidden lg:block"
-                  width="170"
-                  height="12"
-                  viewBox="0 0 170 12"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M0.226497 6L6 11.7735L11.7735 6L6 0.226497L0.226497 6ZM169.773 6L164 0.226497L158.227 6L164 11.7735L169.773 6ZM6 7H9.95V5H6V7ZM17.85 7H25.75V5H17.85V7ZM33.65 7H41.55V5H33.65V7ZM49.45 7H57.35V5H49.45V7ZM65.25 7H73.15V5H65.25V7ZM81.05 7H88.95V5H81.05V7ZM96.85 7H104.75V5H96.85V7ZM112.65 7H120.55V5H112.65V7ZM128.45 7H136.35V5H128.45V7ZM144.25 7H152.15V5H144.25V7ZM160.05 7H164V5H160.05V7Z"
-                    fill="black"
-                  />
-                </svg>
+            </div>
+            {/* Service Content */}
+            <div className="lg:w-[800px] w-full" data-aos="fade-up">
+              <img
+                src={serviceContent[selectedService].image}
+                alt={serviceContent[selectedService].title}
+                className="w-full h-[420px] rounded-md"
+                loading="lazy"
+              />
+
+              <div>
+                <h2 className="text-4xl font-bold mt-6">
+                  {serviceContent[selectedService].title}
+                </h2>
+                <p className="mt-4 text-lg text-gray-700">
+                  {serviceContent[selectedService].description1}
+                </p>
+                <p className="mt-4 text-lg text-gray-700">
+                  {serviceContent[selectedService].description2}
+                </p>
               </div>
-              {/* BLOCK */}
-              <div className="relative my-8 flex w-full rounded-md lg:mx-8 lg:flex-col">
-                <div className="flex h-16 w-16 items-center justify-center rounded-md bg-gray-200">
-                  <h2 className="text-3xl font-medium">3</h2>
-                </div>
-                <div className="ml-6 lg:ml-0">
-                  <h2 className="mb-5 text-xl font-medium lg:mt-8">
-                    Development
-                  </h2>
-                  <p className="font-inter max-w-md pr-5 text-base text-gray-500">
-                    We bring the design concept to life through coding and
-                    development, ensuring compatibility across devices and
-                    browsers.
+
+              {/* Features Section */}
+              <div className="mt-10 flex items-start lg:flex-row flex-col justify-between gap-8">
+                <div className="flex-1 shadow-lg p-5 group">
+                  <i className="bi bi-code-slash text-4xl text-blue-600"></i>
+                  <h3 className="font-medium text-xl py-3">
+                    Innovative Solutions
+                  </h3>
+                  <p className="text-gray-600 text-lg text-justify">
+                    We leverage the latest technologies to provide innovative
+                    solutions that give you a competitive edge.
                   </p>
                 </div>
-                <svg
-                  className="absolute -bottom-[48px] left-[28px] lg:hidden"
-                  width="12"
-                  height="70"
-                  viewBox="0 0 12 95"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M6 0.226497L0.226497 6L6 11.7735L11.7735 6L6 0.226497ZM6 94.7735L11.7735 89L6 83.2265L0.226497 89L6 94.7735ZM5 6V10.15H7V6H5ZM5 18.45V26.75H7L7 18.45H5ZM5 35.05L5 43.35H7V35.05H5ZM5 51.65L5 59.95H7L7 51.65H5ZM5 68.25L5 76.55H7L7 68.25H5ZM5 84.85L5 89H7V84.85H5Z"
-                    fill="black"
-                  ></path>
-                </svg>
-                {/* DESKTOP - HOW IT WORKS LINE */}
-                <svg
-                  className="absolute right-0 top-7 hidden lg:block"
-                  width="170"
-                  height="12"
-                  viewBox="0 0 170 12"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M0.226497 6L6 11.7735L11.7735 6L6 0.226497L0.226497 6ZM169.773 6L164 0.226497L158.227 6L164 11.7735L169.773 6ZM6 7H9.95V5H6V7ZM17.85 7H25.75V5H17.85V7ZM33.65 7H41.55V5H33.65V7ZM49.45 7H57.35V5H49.45V7ZM65.25 7H73.15V5H65.25V7ZM81.05 7H88.95V5H81.05V7ZM96.85 7H104.75V5H96.85V7ZM112.65 7H120.55V5H112.65V7ZM128.45 7H136.35V5H128.45V7ZM144.25 7H152.15V5H144.25V7ZM160.05 7H164V5H160.05V7Z"
-                    fill="black"
-                  />
-                </svg>
+                <div className="flex-1 shadow-lg p-5">
+                  <i className="bi bi-shield-check text-4xl text-green-600"></i>
+                  <h3 className="font-medium text-xl py-3">Robust Security</h3>
+                  <p className="text-gray-600 text-lg text-justify">
+                    Our robust security measures incorporate advanced
+                    encryption, multi-factor authentication.
+                  </p>
+                </div>
+                <div className="flex-1 shadow-lg p-5">
+                  <i className="bi bi-graph-up-arrow text-4xl text-red-600"></i>
+                  <h3 className="font-medium text-xl py-3">Scalable Growth</h3>
+                  <p className="text-gray-600 text-lg text-justify">
+                    We design systems that can scale with your business,
+                    accommodating growth and changing needs.
+                  </p>
+                </div>
               </div>
-              <div className="relative my-8 flex w-full rounded-md lg:mx-8 lg:flex-col">
-                <div className="flex h-16 w-16 items-center justify-center rounded-md bg-gray-200">
-                  <h2 className="text-3xl font-medium">4</h2>
-                </div>
-                <div className="ml-6 lg:ml-0">
-                  <h2 className="mb-5 text-xl font-medium lg:mt-8">
-                    Testing and Deployment
-                  </h2>
-                  <p className="font-inter max-w-md pr-5 text-base text-gray-500">
-                    We rigorously test the website for functionality, usability,
-                    and performance before deploying it to ensure a seamless
-                    user experience.
+
+              {/* Benefits Section */}
+              <div className="border-t mt-10 pt-10 flex flex-col lg:flex-row items-start justify-between gap-8">
+                <div className="flex-1">
+                  <h2 className="text-2xl font-bold">Our Benefits</h2>
+                  <p className="mt-4 text-lg text-gray-600">
+                    Partnering with us provides numerous advantages to propel
+                    your business forward.
                   </p>
+                  <ul className="list-none mt-6 space-y-4">
+                    <li className="flex items-start">
+                      <i className="bi bi-check-circle-fill text-xl text-orange-500 mr-3"></i>
+                      <p className="text-gray-600">
+                        Customized solutions tailored to your business needs.
+                      </p>
+                    </li>
+                    <li className="flex items-start">
+                      <i className="bi bi-check-circle-fill text-xl text-orange-500 mr-3"></i>
+                      <p className="text-gray-600">
+                        Expert team dedicated to delivering high-quality
+                        results.
+                      </p>
+                    </li>
+                    <li className="flex items-start">
+                      <i className="bi bi-check-circle-fill text-xl text-orange-500 mr-3"></i>
+                      <p className="text-gray-600">
+                        Efficient and scalable solutions for long-term growth.
+                      </p>
+                    </li>
+                    <li className="flex items-start">
+                      <i className="bi bi-check-circle-fill text-xl text-orange-500 mr-3"></i>
+                      <p className="text-gray-600">
+                        Comprehensive support and maintenance services.
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+                <div className="flex-1">
+                  <h2 className="text-2xl font-bold">Expert Approach</h2>
+                  <p className="mt-4 text-lg text-gray-600">
+                    Our team follows a systematic, client-centric approach to
+                    deliver value at every step of the project lifecycle.
+                  </p>
+                  <ul className="list-none mt-6 space-y-4">
+                    <li className="flex items-start">
+                      <i className="bi bi-check-circle-fill text-xl text-orange-500 mr-3"></i>
+                      <p className="text-gray-600">
+                        Thorough analysis of your business requirements.
+                      </p>
+                    </li>
+                    <li className="flex items-start">
+                      <i className="bi bi-check-circle-fill text-xl text-orange-500 mr-3"></i>
+                      <p className="text-gray-600">
+                        Agile development methodology for flexibility.
+                      </p>
+                    </li>
+                    <li className="flex items-start">
+                      <i className="bi bi-check-circle-fill text-xl text-orange-500 mr-3"></i>
+                      <p className="text-gray-600">
+                        Comprehensive testing for bug-free deployment.
+                      </p>
+                    </li>
+                    <li className="flex items-start">
+                      <i className="bi bi-check-circle-fill text-xl text-orange-500 mr-3"></i>
+                      <p className="text-gray-600">
+                        Continuous monitoring and optimization post-launch.
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              {/* FAQ Section */}
+              <div className="mt-10">
+                <h2 className="text-4xl font-bold">
+                  Frequently Asked Questions
+                </h2>
+                <div className="mt-6 space-y-4">
+                  {faqs.map((faq, index) => (
+                    <div
+                      key={index}
+                      className={`faq-item p-4 border border-gray-200 rounded-lg cursor-pointer transition-all duration-500 ease-in-out ${
+                        openFAQ === index ? "active" : ""
+                      }`}
+                      onClick={() => toggleFAQ(index)}
+                    >
+                      <div className="flex justify-between items-center">
+                        <h3 className="text-xl font-medium text-gray-800">
+                          {faq.question}
+                        </h3>
+                        <i
+                          className={`bi ${
+                            openFAQ === index
+                              ? "bi-dash-circle-fill"
+                              : "bi-plus-circle-fill"
+                          } text-lg`}
+                        ></i>
+                      </div>
+                      <div
+                        className={`faq-answer overflow-hidden transition-all duration-500 ease-in-out ${
+                          openFAQ === index ? "max-h-40" : "max-h-0"
+                        }`}
+                      >
+                        <p className="mt-3 text-gray-600">{faq.answer}</p>
+                      </div>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
           </div>
-        </section>
+        </div>
       </section>
     </>
   );

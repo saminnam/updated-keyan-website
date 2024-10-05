@@ -15,7 +15,7 @@
   }
 }
 
-.cursor-dot {
+/* .cursor-dot {
   width: 10px;
   height: 10px;
   background-color: #ff7222;
@@ -36,7 +36,7 @@
   border-radius: 50%;
   z-index: 1;
   pointer-events: none;
-}
+} */
 
 /* css for media icons */
 /* From Uiverse.io by MijailVillegas */
@@ -175,7 +175,7 @@
   box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
 }
 
- /* From Uiverse.io by Centered101 */ 
+/* From Uiverse.io by Centered101 */
 .card_team {
   width: 300px;
   height: 350px;
@@ -226,7 +226,6 @@
   object-position: 0px 0px;
   transition: all 0.5s ease-in-out 0s;
 }
-
 
 .card_team .profile-pic svg {
   width: 100%;
@@ -297,13 +296,13 @@
 }
 
 .card_team .bottom .bottom-bottom .social-links-container svg:hover {
-  fill:  #fff;
+  fill: #fff;
   transform: scale(1.2);
 }
 
 .card_team .bottom .bottom-bottom .button {
   background: white;
-  color:  #767371;
+  color: #767371;
   border: none;
   border-radius: 20px;
   font-size: 0.6rem;
@@ -312,7 +311,7 @@
 }
 
 .card_team .bottom .bottom-bottom .button:hover {
-  background:  #fff;
+  background: #fff;
   color: #767371;
   /* box-shadow: 0 5px 5px #fff; */
 }
@@ -354,8 +353,6 @@
   transition: all 0.5s ease-in-out 0.5s;
 }
 
-
-
 /* styles for contact form */
 .main {
   position: relative;
@@ -374,7 +371,8 @@
   font-size: 17px;
 }
 
-.input:focus , .input:valid {
+.input:focus,
+.input:valid {
   border-color: #ff7222;
 }
 
@@ -389,12 +387,14 @@ label span {
   opacity: 0%;
 }
 
-.input:focus + label span ,.input:valid + label span {
+.input:focus + label span,
+.input:valid + label span {
   color: #ff7222;
   top: -29px;
   opacity: 100%;
 }
 
-.input:focus + label p ,.input:valid + label p {
+.input:focus + label p,
+.input:valid + label p {
   opacity: 0;
 }

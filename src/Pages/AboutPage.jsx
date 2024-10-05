@@ -39,7 +39,7 @@ const AboutPage = () => {
 
                 <div className="absolute -translate-x-1/2 left-1/2 -top-16">
                   <img
-                    className="w-32 h-32 img-rotate"
+                    className="w-32 h-32"
                     src="https://cdn.rareblocks.xyz/collection/celebration/images/features/2/round-text.png"
                     alt=""
                   />

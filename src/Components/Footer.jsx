@@ -80,7 +80,7 @@ const Footer = () => {
             <ul class="mt-6 space-y-4">
               <li>
                 <a
-                  href="#"
+                  href="/contact"
                   title=""
                   class="flex text-sm text-white transition-all duration-200 hover:text-orange-600 focus:text-orange-600"
                 >
