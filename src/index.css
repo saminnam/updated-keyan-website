@@ -15,31 +15,6 @@
   }
 }
 
-/* .cursor-dot {
-  width: 10px;
-  height: 10px;
-  background-color: #ff7222;
-}
-
-.cursor-outline {
-  width: 40px;
-  height: 40px;
-  border: 2px solid #ff7222;
-}
-
-.cursor-dot,
-.cursor-outline {
-  position: fixed;
-  top: 0;
-  left: 0;
-  transform: translate(-50%, -50%);
-  border-radius: 50%;
-  z-index: 1;
-  pointer-events: none;
-} */
-
-/* css for media icons */
-/* From Uiverse.io by MijailVillegas */
 .card {
   position: absolute;
   top: 260px;
@@ -356,7 +331,7 @@
 /* styles for contact form */
 .main {
   position: relative;
-  max-height: 200px;
+  max-height: auto;
 }
 
 .input {

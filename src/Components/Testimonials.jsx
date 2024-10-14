@@ -47,7 +47,7 @@ const Testimonials = () => {
   const testimonialInfo = testimonialsData[currentIndex];
 
   return (
-    <section>
+    <section className="group">
       <div className="mx-auto flex flex-col gap-y-16 px-5 pb-20 sm:gap-y-20 md:px-10 relative">
         <div className="flex items-center justify-center flex-col gap-6">
           <h2
@@ -57,7 +57,7 @@ const Testimonials = () => {
           >
             Testimonials
           </h2>
-          <div className=" w-[160px] h-[5px] bg-[#ff7222] rounded"></div>
+          <div className="w-0 group-hover:w-40 transition-all duration-500 h-[5px] bg-[#ff7222] rounded"></div>
         </div>
         <div className="p-6 text-center justify-center">
           <div className="flex mb-8 justify-center">

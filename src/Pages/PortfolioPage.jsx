@@ -55,7 +55,7 @@ const projects = [
 
 const PortfolioPage = () => {
   return (
-    <section>
+    <section className="group">
       <CommonHero title={"PORTFOLIOS"} />
 
       <section>
@@ -70,7 +70,7 @@ const PortfolioPage = () => {
             >
               Our Projects
             </h2>
-            <div className="w-[180px] h-[5px] bg-[#ff7222] rounded"></div>
+            <div className="w-0 group-hover:w-40 transition-all duration-500 h-[5px] bg-[#ff7222] rounded"></div>
           </div>
           {/* Content */}
           <div className="grid justify-items-center gap-4 sm:grid-cols-2 md:grid-cols-3 mt-10">

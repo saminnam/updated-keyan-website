@@ -8,8 +8,9 @@ import PortfolioPage from "./Pages/PortfolioPage";
 import BlogsPage from "./Pages/BlogsPage";
 import ContactPage from "./Pages/ContactPage";
 import Footer from "./Components/Footer";
-import 'aos/dist/aos.css';
-import AOS from 'aos'
+import "aos/dist/aos.css";
+import AOS from "aos";
+import CareerPage from "./Pages/CareerPage";
 
 const App = () => {
   useEffect(() => {
@@ -21,15 +22,16 @@ const App = () => {
         <Navbar />
         <Routes>
           <Route>
-            <Route index element={<Home />}></Route>
-            <Route path="/about" element={<AboutPage />}></Route>
-            <Route path="/services" element={<ServicePage />}></Route>
-            <Route path="/portfolios" element={<PortfolioPage />}></Route>
-            <Route path="/blogs" element={<BlogsPage />}></Route>
-            <Route path="/contact" element={<ContactPage />}></Route>
+            <Route index element={<Home />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/services" element={<ServicePage />} />
+            <Route path="/portfolios" element={<PortfolioPage />} />
+            <Route path="/blogs" element={<BlogsPage />} />
+            <Route path="/contact" element={<ContactPage />} />
+            <Route path="/career" element={<CareerPage/>} />
           </Route>
         </Routes>
-        <Footer/>
+        <Footer />
       </BrowserRouter>
     </>
   );

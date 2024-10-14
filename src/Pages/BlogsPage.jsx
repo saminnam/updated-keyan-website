@@ -102,9 +102,9 @@ const blogPosts = [
 
 const BlogsPage = () => {
   return (
-    <section>
+    <section >
       <CommonHero title={"BLOGS"} />
-      <section className="py-10 bg-white sm:py-16 lg:py-24">
+      <section className="py-10 bg-white sm:py-16 lg:py-24 group">
         <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
           <div className="max-w-2xl mx-auto text-center">
             <h2
@@ -114,7 +114,7 @@ const BlogsPage = () => {
             >
               Latest from the Blog
             </h2>
-            <div className=" w-[230px] mx-auto mt-4 h-[5px] bg-[#ff7222] rounded"></div>
+            <div className="w-0 group-hover:w-72 transition-all duration-500 mx-auto mt-4 h-[5px] bg-[#ff7222] rounded"></div>
             <p className="max-w-xl mx-auto mt-4 text-base leading-relaxed text-gray-600">
               Discover the latest trends and tips in software technology and
               development.

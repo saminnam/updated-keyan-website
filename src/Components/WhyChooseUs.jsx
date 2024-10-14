@@ -27,7 +27,7 @@ const WhyChooseUs = () => {
   ];
 
   return (
-    <section className="py-10 ">
+    <section className="py-10 group">
       <div className="font-inter mx-auto h-auto w-full max-w-screen-2xl">
         <div className="px-6 py-6 lg:px-20 lg:py-4">
           <div className="flex flex-col items-center text-center gap-5">
@@ -39,7 +39,7 @@ const WhyChooseUs = () => {
               >
                 Why Choose Us?
               </h2>
-              <div className="w-[180px] h-[5px] bg-[#ff7222] rounded"></div>
+              <div className="w-0 group-hover:w-60 transition-all duration-500 h-[5px] bg-[#ff7222] rounded"></div>
             </div>
 
             <p className="mb-8 mt-4 max-w-2xl text-base text-gray-500 md:mb-12 md:text-lg lg:mb-16">

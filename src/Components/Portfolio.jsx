@@ -36,7 +36,7 @@ const Portfolio = () => {
   };
 
   return (
-    <section>
+    <section className="group">
       {/* Container */}
       <div className="mx-auto w-full max-w-7xl px-5 py-16 md:px-10 md:py-20">
         {/* Title */}
@@ -48,7 +48,7 @@ const Portfolio = () => {
           >
             Portfolio
           </h2>
-          <div className=" w-[140px] h-[5px] bg-[#ff7222] rounded"></div>
+          <div className="w-0 group-hover:w-40 transition-all duration-500 h-[5px] bg-[#ff7222] rounded"></div>
           <p className="mb-8 mt-4 max-w-xl text-base text-center text-gray-500 md:mb-12 md:text-lg lg:mb-16">
             Explore our diverse portfolio showcasing successful software
             solutions that demonstrate our expertise in driving innovation and
@@ -98,7 +98,7 @@ const Portfolio = () => {
                 className="mb-3 inline-block rounded h-60 object-cover w-full lg:w-96"
               />
               <p className="mb-1 text-center font-bold">Project 4</p>
-              <p className="text-center text-sm text-gray-500">Web Design</p>
+              <p className="text-center text-sm text-gray-500">E-Commerce</p>
             </a>
             <a
               href="#"

@@ -20,19 +20,25 @@ const AboutUs = () => {
   };
 
   useEffect(() => {
-    incrementCounter(setCustomers, 10000); // Set target for customers
-    incrementCounter(setEmails, 200000); // Set target for emails
+    incrementCounter(setCustomers, 100); // Set target for customers
+    incrementCounter(setEmails, 2000); // Set target for emails
     incrementCounter(setProjects, 500); // Set target for projects
   }, []);
 
   return (
     <header>
       {/* Hero Container */}
-      <div className="mx-auto w-full max-w-screen-2xl px-5 py-16 lg:px-20 md:py-20">
+      <div className="mx-auto w-full max-w-screen-2xl px-5 py-16 lg:px-20 md:py-20 group">
         <div className="flex flex-col items-start text-center gap-5 mb-4">
           <div className="flex items-start justify-center flex-col gap-6">
-            <h2 className="text-3xl font-bold md:text-3xl font-serif" data-aos="flip-down" data-aos-duration="2000">Get to Know Us</h2>
-            <div className="w-[150px] h-[5px] bg-[#ff7222] rounded"></div>
+            <h2
+              className="text-3xl font-bold md:text-3xl font-serif"
+              data-aos="flip-down"
+              data-aos-duration="2000"
+            >
+              Get to Know Us
+            </h2>
+            <div className="w-0 group-hover:w-40 transition-all duration-500 h-[5px] bg-[#ff7222] rounded"></div>
           </div>
         </div>
         {/* Component */}
@@ -44,7 +50,11 @@ const AboutUs = () => {
               Your Vision, Our Expertise, Perfectly Crafted.
             </h1>
             <p className="mb-6 max-w-2xl text-sm text-gray-500 sm:text-[18px] md:mb-10 lg:mb-12 leading-normal">
-              Keyan Technologies specializes in Web Development, App Development, and Software Development. We deliver innovative digital solutions, from responsive websites and mobile apps to creative visuals, helping businesses thrive online. Our goal is to bring your ideas to life with cutting-edge technology and design.
+              Keyan Technologies specializes in Web Development, App
+              Development, and Software Development. We deliver innovative
+              digital solutions, from responsive websites and mobile apps to
+              creative visuals, helping businesses thrive online. Our goal is to
+              bring your ideas to life with cutting-edge technology and design.
             </p>
 
             {/* Hero Info */}
@@ -63,7 +73,7 @@ const AboutUs = () => {
               </div>
             </div>
             <div>
-              <button className="px-10 py-4 rounded-md bg-[#ff7222] text-center font-semibold text-white mt-8">
+              <button className="px-10 py-4 rounded-md hover:bg-transparent hover:text-[#ff7222] border border-[#ff7222] duration-300 transition-transform bg-[#ff7222] text-center font-semibold text-white mt-8">
                 More Info
               </button>
             </div>

@@ -2,7 +2,7 @@ import React from "react";
 
 const Blog = () => {
   return (
-    <section>
+    <section className="group">
       {/* Container */}
       <div className="mx-auto w-full max-w-7xl px-5 py-16 md:px-10 md:py-20">
         {/* Title */}
@@ -13,9 +13,9 @@ const Blog = () => {
         >
           The latest and greatest news
         </h2>
-        <div className="mt-5 w-[300px] h-[5px] bg-[#ff7222] rounded"></div>
+        <div className="w-0 group-hover:w-96 transition-all duration-500 h-[5px] mt-4 bg-[#ff7222] rounded"></div>
         <p className="mb-8 mt-4 text-center text-sm text-gray-500 sm:text-base md:mb-12 lg:mb-16 lg:text-left">
-          Lorem ipsum dolor sit amet elit ut aliquam
+        The Future of Software Development: Trends to Watch in 2024
         </p>
         {/* Content */}
         <div className="mx-auto grid gap-8 lg:grid-cols-2">
@@ -33,14 +33,14 @@ const Blog = () => {
             <div className="flex flex-col items-start py-4">
               <div className="mb-4 rounded-md bg-gray-100 px-2 py-1.5">
                 <p className="text-sm font-semibold text-blue-600">
-                  CATEGORY NAME
+                  TECHNOLOGIES
                 </p>
               </div>
               <p className="mb-4 text-xl font-bold md:text-2xl">
-                The latest news with Flowspark
+              Emerging Technologies and How They Will Shape the Software Industry
               </p>
               <div className="flex flex-col text-sm text-gray-500 lg:flex-row">
-                <p>Laila Bahar</p>
+                <p>John Doe</p>
                 <p className="mx-2 hidden lg:block">-</p>
                 <p>6 mins read</p>
               </div>
@@ -61,17 +61,17 @@ const Blog = () => {
               <div className="flex flex-col items-start pt-4 lg:px-8">
                 <div className="mb-2 rounded-md bg-gray-100 px-2 py-1.5">
                   <p className="text-sm font-semibold text-blue-600">
-                    CATEGORY NAME
+                    TECHNOLOGIES
                   </p>
                 </div>
                 <p className="mb-2 text-sm font-bold sm:text-base">
-                  Here is the title for this blog
+                A Guide to Selecting Tools and Technologies
                 </p>
                 <div className="flex flex-col items-start">
                   <div className="flex flex-col text-sm text-gray-500 sm:text-base lg:flex-row lg:items-center">
-                    <p>Laila Bahar</p>
+                    <p>Jane Smith</p>
                     <p className="mx-2 hidden lg:block">-</p>
-                    <p>6 mins read</p>
+                    <p>8 mins read</p>
                   </div>
                 </div>
               </div>
@@ -90,15 +90,15 @@ const Blog = () => {
               <div className="flex flex-col items-start pt-4 lg:px-8">
                 <div className="mb-2 rounded-md bg-gray-100 px-2 py-1.5">
                   <p className="text-sm font-semibold text-blue-600">
-                    CATEGORY NAME
+                    SOFTWARE DEVELOPMENT
                   </p>
                 </div>
                 <p className="mb-2 text-sm font-bold sm:text-base">
-                  Here is the title for this blog
+                Understanding Agile Practices and Their Benefits for Teams
                 </p>
                 <div className="flex flex-col items-start">
                   <div className="flex flex-col text-sm text-gray-500 sm:text-base lg:flex-row lg:items-center">
-                    <p>Laila Bahar</p>
+                    <p>Michael Lee</p>
                     <p className="mx-2 hidden lg:block">-</p>
                     <p>6 mins read</p>
                   </div>
@@ -119,17 +119,17 @@ const Blog = () => {
               <div className="flex flex-col items-start pt-4 lg:px-8">
                 <div className="mb-2 rounded-md bg-gray-100 px-2 py-1.5">
                   <p className="text-sm font-semibold text-blue-600">
-                    CATEGORY NAME
+                    ARTIFICIAL INTELLIGENCE
                   </p>
                 </div>
                 <p className="mb-2 text-sm font-bold sm:text-base">
-                  Here is the title for this blog
+                How AI is Revolutionizing Software Across Industries
                 </p>
                 <div className="flex flex-col items-start">
                   <div className="flex flex-col text-sm text-gray-500 sm:text-base lg:flex-row lg:items-center">
-                    <p>Laila Bahar</p>
+                    <p>Emily Davis</p>
                     <p className="mx-2 hidden lg:block">-</p>
-                    <p>6 mins read</p>
+                    <p>5 mins read</p>
                   </div>
                 </div>
               </div>

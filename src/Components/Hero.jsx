@@ -39,7 +39,7 @@ const Hero = () => {
             {/* Button */}
             <a
               href="#"
-              className="mr-6 inline-block items-center rounded-md bg-[#ff7222] px-8 py-4 text-center font-semibold text-white lg:mr-8"
+              className="mr-6 inline-block items-center rounded-md hover:bg-transparent hover:text-[#ff7222] border border-[#ff7222] duration-300 transition-transform bg-[#ff7222] px-8 py-4 text-center font-semibold text-white lg:mr-8"
             >
               Get Started
             </a>

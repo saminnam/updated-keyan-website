@@ -36,7 +36,7 @@ const Services = () => {
   ];
 
   return (
-    <section className="bg-[#fcfcfc]">
+    <section className="bg-[#fcfcfc] group">
       {/* Container */}
       <div className="mx-auto w-full max-w-7xl px-5 py-16 md:px-10 md:py-20">
         {/* Title */}
@@ -45,7 +45,7 @@ const Services = () => {
             <h2 className="text-3xl font-bold font-serif md:text-5xl" data-aos="flip-down">
               Our Services
             </h2>
-            <div className="w-[180px] h-[5px] bg-[#ff7222] rounded"></div>
+            <div className="w-0 group-hover:w-40 transition-all duration-500 h-[5px] bg-[#ff7222] rounded"></div>
           </div>
 
           <p className="mb-8 mt-4 max-w-xl text-base text-gray-500 md:mb-12 md:text-lg lg:mb-16">

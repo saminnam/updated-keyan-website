@@ -1,6 +1,7 @@
 import React from "react";
 import logowhite from "../assets/keyan-white.png";
 import { Link } from "react-router-dom";
+import { IoMailOpenOutline } from "react-icons/io5";
 
 const Footer = () => {
   return (
@@ -26,7 +27,6 @@ const Footer = () => {
                 <Link to={"/about"}>
                   <a
                     href="/about"
-                    title=""
                     class="flex text-sm text-white transition-all duration-200 hover:text-orange-600 focus:text-orange-600"
                   >
                     {" "}
@@ -39,7 +39,6 @@ const Footer = () => {
                 <Link to={"/services"}>
                   <a
                     href="/services"
-                    title=""
                     class="flex text-sm text-white transition-all duration-200 hover:text-orange-600 focus:text-orange-600"
                   >
                     {" "}
@@ -52,7 +51,6 @@ const Footer = () => {
                 <Link to={"/portfolios"}>
                   <a
                     href="/portfolios"
-                    title=""
                     class="flex text-sm text-white transition-all duration-200 hover:text-orange-600 focus:text-orange-600"
                   >
                     {" "}
@@ -62,123 +60,115 @@ const Footer = () => {
               </li>
 
               <li>
-                <a
-                  href="#"
-                  title=""
+                <Link
+                  to={"/career"}
                   class="flex text-sm text-white transition-all duration-200 hover:text-orange-600 focus:text-orange-600"
                 >
                   {" "}
                   Career{" "}
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
 
           <div class="lg:col-span-2">
-            <p class="text-base font-semibold text-white">Help</p>
+            <p class="text-base font-semibold text-white">Services</p>
 
             <ul class="mt-6 space-y-4">
               <li>
-                <a
-                  href="/contact"
-                  title=""
+                <Link
+                  to={"/services"}
                   class="flex text-sm text-white transition-all duration-200 hover:text-orange-600 focus:text-orange-600"
                 >
                   {" "}
-                  Customer Support{" "}
-                </a>
+                  Web Development{" "}
+                </Link>
               </li>
 
               <li>
-                <a
-                  href="#"
-                  title=""
+                <Link
+                  to={"/services"}
                   class="flex text-sm text-white transition-all duration-200 hover:text-orange-600 focus:text-orange-600"
                 >
                   {" "}
-                  Delivery Details{" "}
-                </a>
+                  App Development{" "}
+                </Link>
               </li>
 
               <li>
-                <a
-                  href="#"
-                  title=""
+                <Link
+                  to={"/services"}
                   class="flex text-sm text-white transition-all duration-200 hover:text-orange-600 focus:text-orange-600"
                 >
                   {" "}
-                  Terms & Conditions{" "}
-                </a>
+                  Software Development{" "}
+                </Link>
               </li>
 
               <li>
-                <a
-                  href="#"
-                  title=""
+                <Link
+                  to={"/services"}
                   class="flex text-sm text-white transition-all duration-200 hover:text-orange-600 focus:text-orange-600"
                 >
                   {" "}
-                  Privacy Policy{" "}
-                </a>
+                  Web Design{" "}
+                </Link>
               </li>
             </ul>
           </div>
 
           <div class="lg:col-span-2">
-            <p class="text-base font-semibold text-white">Resources</p>
+            <p class="text-base font-semibold text-white">Websites</p>
 
             <ul class="mt-6 space-y-5">
               <li>
-                <a
-                  href="#"
-                  title=""
+                <Link
+                  to={"/portfolios"}
                   class="flex text-sm text-white transition-all duration-200 hover:text-orange-600 focus:text-orange-600"
                 >
                   {" "}
-                  Free eBooks{" "}
-                </a>
+                  E-Commerce{" "}
+                </Link>
               </li>
 
               <li>
-                <a
-                  href="#"
-                  title=""
+                <Link
+                  to={"/portfolios"}
                   class="flex text-sm text-white transition-all duration-200 hover:text-orange-600 focus:text-orange-600"
                 >
                   {" "}
-                  Development Tutorial{" "}
-                </a>
+                  Booking Applications{" "}
+                </Link>
               </li>
 
               <li>
-                <a
-                  href="#"
-                  title=""
+                <Link
+                  to={"/portfolios"}
                   class="flex text-sm text-white transition-all duration-200 hover:text-orange-600 focus:text-orange-600"
                 >
                   {" "}
-                  How to - Blog{" "}
-                </a>
+                  Healthcare Services{" "}
+                </Link>
               </li>
 
               <li>
-                <a
-                  href="#"
-                  title=""
+                <Link
+                  to={"/portfolios"}
                   class="flex text-sm text-white transition-all duration-200 hover:text-orange-600 focus:text-orange-600"
                 >
                   {" "}
-                  YouTube Playlist{" "}
-                </a>
+                  Social Media Platform{" "}
+                </Link>
               </li>
             </ul>
           </div>
 
           <div class="lg:col-span-2">
-            <p class="text-base font-semibold text-white">Subscribe</p>
-            <p className="text-white mt-3">
-              Follow Our News Letter To Stay Updated
-            </p>
+            <p class="text-base font-semibold text-white">Contact us</p>
+            <div className="flex justify-center items-center text-white mt-4 gap-2">
+              <IoMailOpenOutline className="text-2xl" />
+              <p className="">info@inetztech.com </p>
+            </div>
           </div>
         </div>
 
@@ -193,7 +183,6 @@ const Footer = () => {
             <li>
               <a
                 href="#"
-                title=""
                 class="flex items-center justify-center text-white transition-all duration-200 bg-transparent border border-gray-300 rounded-full w-7 h-7 focus:bg-orange-600 hover:text-white focus:text-white hover:bg-orange-600 hover:border-orange-600 focus:border-orange-600"
               >
                 <svg
@@ -210,7 +199,6 @@ const Footer = () => {
             <li>
               <a
                 href="#"
-                title=""
                 class="flex items-center justify-center text-white transition-all duration-200 bg-transparent border border-gray-300 rounded-full w-7 h-7 focus:bg-orange-600 hover:text-white focus:text-white hover:bg-orange-600 hover:border-orange-600 focus:border-orange-600"
               >
                 <svg
@@ -227,7 +215,6 @@ const Footer = () => {
             <li>
               <a
                 href="#"
-                title=""
                 class="flex items-center justify-center text-white transition-all duration-200 bg-transparent border border-gray-300 rounded-full w-7 h-7 focus:bg-orange-600 hover:text-white focus:text-white hover:bg-orange-600 hover:border-orange-600 focus:border-orange-600"
               >
                 <svg
@@ -246,7 +233,6 @@ const Footer = () => {
             <li>
               <a
                 href="#"
-                title=""
                 class="flex items-center justify-center text-white transition-all duration-200 bg-transparent border border-gray-300 rounded-full w-7 h-7 focus:bg-orange-600 hover:text-white focus:text-white hover:bg-orange-600 hover:border-orange-600 focus:border-orange-600"
               >
                 <svg

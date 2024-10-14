@@ -2,7 +2,7 @@ import React from "react";
 
 const OurTeam = () => {
   return (
-    <section className="my-10">
+    <section className="my-10 group">
       <div className="flex items-center justify-center flex-col gap-6">
         <h2
           className="text-3xl font-bold md:text-5xl font-serif"
@@ -11,7 +11,7 @@ const OurTeam = () => {
         >
           Our Team
         </h2>
-        <div className=" w-[160px] h-[5px] bg-[#ff7222] rounded"></div>
+        <div className="w-0 group-hover:w-40 transition-all duration-500 h-[5px] bg-[#ff7222] rounded"></div>
         <p className="text-center">
           Meet the innovative minds driving our software solutions forward.
         </p>

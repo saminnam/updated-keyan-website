@@ -62,11 +62,11 @@ const AboutPage = () => {
                 </p>
                 <div className="grid w-full max-w-2xl grid-flow-row grid-cols-3 gap-4 mt-10">
                   <div>
-                    <h3 className="text-2xl font-bold md:text-3xl">10K+</h3>
-                    <p className="text-sm text-gray-500">Customers</p>
+                    <h3 className="text-2xl font-bold md:text-3xl">100K+</h3>
+                    <p className="text-sm text-gray-500">Clients</p>
                   </div>
                   <div>
-                    <h3 className="text-2xl font-bold md:text-3xl">200K+</h3>
+                    <h3 className="text-2xl font-bold md:text-3xl">2000K+</h3>
                     <p className="text-sm text-gray-500">Emails</p>
                   </div>
                   <div>

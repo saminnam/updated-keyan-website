@@ -32,16 +32,17 @@ const ContactPage = () => {
                 </div>
               </div>
             </div>
-            <div className="mx-auto max-w-xl p-8 text-center rounded-lg shadow-lg shadow-gray-400">
+            <div className="mx-auto  max-w-xl p-8 text-center rounded-lg shadow-lg shadow-gray-400">
               <h3 className="text-2xl font-bold md:text-3xl font-serif">
                 Feel free to contact
               </h3>
               <p className="mx-auto mb-6 mt-4 max-w-lg text-sm text-gray-500 lg:mb-8">
-              Are you prepared to elevate your business to new heights? Reach out to us today.
+                Are you prepared to elevate your business to new heights? Reach
+                out to us today.
               </p>
               {/* Form */}
               <form
-                className="mx-auto mb-4 max-w-sm text-left"
+                className="mx-auto mb-4 max-w-sm h-[400px] text-left"
                 name="wf-form-password"
                 method="get"
               >
@@ -162,6 +163,41 @@ const ContactPage = () => {
 
                       <p className="absolute -left-2 -top-2 text-xl m-2 text-gray-400 transition duration-500 pointer-events-none">
                         Subject
+                      </p>
+                    </label>
+                  </div>
+                  <div className="relative mb-5 md:mb-6 lg:mb-8">
+                    <textarea
+                      required
+                      maxLength="5000"
+                      name="field"
+                      className="input block h-auto w-full rounded-md border border-black px-3 py-2 pl-4 text-sm text-black"
+                    ></textarea>
+                    <label className="absolute left-2 top-2">
+                      <span className="transition-all delay-[0ms] left-0 absolute">
+                        M
+                      </span>
+                      <span className="transition-all delay-[75ms] left-[16px] absolute">
+                        e
+                      </span>
+                      <span className="transition-all delay-[150ms] left-[26px] absolute">
+                        s
+                      </span>
+                      <span className="transition-all delay-[225ms] left-[34px] absolute">
+                        s
+                      </span>
+                      <span className="transition-all delay-[300ms] left-[42px] absolute">
+                        a
+                      </span>
+                      <span className="transition-all delay-[375ms] left-[52px] absolute">
+                        g
+                      </span>
+                      <span className="transition-all delay-[450ms] left-[63px] absolute">
+                        e
+                      </span>
+
+                      <p className="absolute -left-2 -top-2 text-xl m-2 text-gray-400 transition duration-500 pointer-events-none">
+                        Message
                       </p>
                     </label>
                   </div>
