@@ -39,7 +39,7 @@ const WhyChooseUs = () => {
               >
                 Why Choose Us?
               </h2>
-              <div className="w-0 group-hover:w-60 transition-all duration-500 h-[5px] bg-[#ff7222] rounded"></div>
+              <div className="lg:w-0 w-40 lg:group-hover:w-60 transition-all duration-500 h-[5px] bg-[#006CB7] rounded"></div>
             </div>
 
             <p className="mb-8 mt-4 max-w-2xl text-base text-gray-500 md:mb-12 md:text-lg lg:mb-16">

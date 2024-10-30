@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import wed_service from "../assets/web-service-bg.png";
+import { Link } from "react-router-dom";
 
 const AboutUs = () => {
   const [customers, setCustomers] = useState(0);
@@ -38,7 +39,7 @@ const AboutUs = () => {
             >
               Get to Know Us
             </h2>
-            <div className="w-0 group-hover:w-40 transition-all duration-500 h-[5px] bg-[#ff7222] rounded"></div>
+            <div className="lg:w-0 w-40 lg:group-hover:w-40 transition-all duration-500 h-[5px] bg-[#006CB7] rounded"></div>
           </div>
         </div>
         {/* Component */}
@@ -73,9 +74,12 @@ const AboutUs = () => {
               </div>
             </div>
             <div>
-              <button className="px-10 py-4 rounded-md hover:bg-transparent hover:text-[#ff7222] border border-[#ff7222] duration-300 transition-transform bg-[#ff7222] text-center font-semibold text-white mt-8">
-                More Info
-              </button>
+              <Link to={"/about"}>
+                {" "}
+                <button className="px-10 py-4 rounded-md hover:bg-transparent hover:text-[#006CB7] border border-[#006CB7] duration-300 transition-all bg-[#006CB7] text-center font-semibold text-white mt-8">
+                  More Info
+                </button>
+              </Link>
             </div>
           </div>
           {/* Hero Image */}

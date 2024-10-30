@@ -1,22 +1,46 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 
+// const testimonialsData = [
+//   {
+//     img:"https://assets.website-files.com/6458c625291a94a195e6cf3a/6458c625291a947e84e6cf91_Vector.svg",
+//     text: "The team at Keyan Technologies exceeded our expectations with their custom software solutions. Their expertise and dedication transformed our operations, resulting in a 30% increase in productivity.",
+//     author: "David James",
+//     role: "CEO/Chairman",
+//     rating: 4,
+//   },
+//   {
+//     img:"https://assets.website-files.com/6458c625291a94a195e6cf3a/6458c625291a947e84e6cf91_Vector.svg",
+//     text: "Working with Keyan Technologies was a game-changer for us. Their technical consulting services helped streamline our IT infrastructure, reducing our operational costs significantly.",
+//     author: "Sarah Miller",
+//     role: "Marketing Head",
+//     rating: 5,
+//   },
+//   {
+//     img:"https://assets.website-files.com/6458c625291a94a195e6cf3a/6458c625291a947e84e6cf91_Vector.svg",
+//     text: "The software solutions provided by Keyan Technologies were tailored perfectly to our needs. Their team's responsiveness and support throughout the development process were invaluable",
+//     author: "John Doe",
+//     role: "CTO",
+//     rating: 3,
+//   },
+// ];
+
 const Testimonials = () => {
   const [testimonialsData, setTestimonialData] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
 
+
   useEffect(() => {
     fetcher();
-  }, []);
+  },[])
 
   const fetcher = () => {
-    axios
-      .get("http://localhost:3000/api/testimonials")
-      .then((res) => {
-        setTestimonialData(res.data);
-      })
-      .catch((error) => console.log(error));
-  };
+    axios.get("http://localhost:3000/api/testimonials")
+    .then((res) => {
+      setTestimonialData(res.data)
+    })
+    .catch((error) => console.log(error))
+  }
 
   // Automatically cycle through testimonials
   useEffect(() => {
@@ -24,7 +48,7 @@ const Testimonials = () => {
       handleNext();
     }, 3000); // Change testimonial every 3 seconds
     return () => clearInterval(intervalId); // Cleanup on component unmount
-  }, [currentIndex, testimonialsData.length]);
+  }, [currentIndex]);
 
   const handlePrev = () => {
     setCurrentIndex((prevIndex) =>
@@ -40,11 +64,6 @@ const Testimonials = () => {
 
   const testimonialInfo = testimonialsData[currentIndex];
 
-  // Fallback in case there is no data yet
-  if (!testimonialInfo) {
-    return <div>Loading testimonials...</div>;
-  }
-
   return (
     <section className="group">
       <div className="mx-auto flex flex-col gap-y-16 px-5 pb-20 sm:gap-y-20 md:px-10 relative">
@@ -56,14 +75,14 @@ const Testimonials = () => {
           >
             Testimonials
           </h2>
-          <div className="lg:w-0 w-40 lg:group-hover:w-40 transition-all duration-500 h-[5px] bg-[#006CB7] rounded"></div>
+          <div className="w-0 group-hover:w-40 transition-all duration-500 h-[5px] bg-[#ff7222] rounded"></div>
         </div>
         <div className="p-6 text-center justify-center">
           <div className="flex mb-8 justify-center">
             {[...Array(testimonialInfo.rating)].map((_, i) => (
               <img
                 key={i}
-                src="https://assets.website-files.com/6458c625291a94a195e6cf3a/6458c625291a947e84e6cf91_Vector.svg" // replace this with your star image path
+                src={testimonialInfo.image}
                 alt="star"
                 className="mr-3 inline-block w-4 flex-none"
               />
@@ -76,17 +95,17 @@ const Testimonials = () => {
           <img
             className="w-16 h-16 rounded-full object-cover mx-auto mt-8"
             alt="author"
-            src={`http://localhost:3000/Images/${testimonialInfo.image}`} // Fallback image if not available
+            src="https://i.pinimg.com/564x/dc/89/25/dc892582e8c26c2994864ae56d9285df.jpg"
           />
 
           <p className="font-semibold text-lg mt-3">{testimonialInfo.name}</p>
-          <p className="text-sm text-gray-500">{testimonialInfo.role}</p>
+          {/* <p className="text-sm text-gray-500">{testimonialInfo.role}</p> */}
         </div>
 
         {/* Left navigation button */}
         <button
           onClick={handlePrev}
-          className="absolute top-1/2 transform -translate-y-1/2 left-5" // Fixed left position
+          className="absolute top-1/2 transform -translate-y-1/2 right-0 md:left-5"
         >
           <svg
             width="72"
@@ -125,7 +144,7 @@ const Testimonials = () => {
         {/* Right navigation button */}
         <button
           onClick={handleNext}
-          className="absolute top-1/2 transform -translate-y-1/2 right-5" // Fixed right position
+          className="absolute top-1/2 transform -translate-y-1/2 right-0 md:right-5"
         >
           <svg
             width="72"

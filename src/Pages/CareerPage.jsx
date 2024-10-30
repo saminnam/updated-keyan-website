@@ -70,7 +70,7 @@ const CareerPage = () => {
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#006CB7]"
                   placeholder="Enter your name"
                   required
                 />
@@ -90,7 +90,7 @@ const CareerPage = () => {
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#006CB7]"
                   placeholder="Enter your email"
                   required
                 />
@@ -110,7 +110,7 @@ const CareerPage = () => {
                   name="phone"
                   value={formData.phone}
                   onChange={handleChange}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#006CB7]"
                   placeholder="Enter your phone number"
                   required
                 />
@@ -148,7 +148,7 @@ const CareerPage = () => {
                   name="subject"
                   value={formData.subject}
                   onChange={handleChange}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#006CB7]"
                   placeholder="Enter the subject"
                   required
                 />
@@ -167,7 +167,7 @@ const CareerPage = () => {
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#006CB7]"
                   placeholder="Enter your message"
                   rows="4"
                   required
@@ -178,7 +178,7 @@ const CareerPage = () => {
               <div className="text-center">
                 <button
                   type="submit"
-                  className="px-6 py-2 bg-orange-500 text-white font-semibold rounded-md hover:bg-transparent border border-orange-500 transition-transform duration-300 hover:text-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-500"
+                  className="px-6 py-2 bg-[#006CB7] text-white font-semibold rounded-md hover:bg-transparent border border-[#006CB7] transition-transform duration-300 hover:text-[#006CB7] focus:outline-none focus:ring-2 focus:ring-[#006CB7]"
                 >
                   Submit Application
                 </button>

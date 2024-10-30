@@ -102,14 +102,14 @@ const ServicePage = () => {
             <div className="">
               {/* Ensure this parent container has enough height for sticky to work */}
               <div className="sticky top-24 flex flex-col gap-12">
-                <div className="lg:w-[450px] w-full text-[#ff7222] shadow-xl flex flex-col items-center justify-center gap-7 py-20 px-14 rounded-md">
+                <div className="lg:w-[450px] w-full text-[#006CB7] shadow-xl flex flex-col items-center justify-center gap-7 py-20 px-14 rounded-md">
                   {Object.keys(serviceContent).map((service) => (
                     <div
                       key={service}
                       onClick={() => handleServiceClick(service)}
-                      className={`group cursor-pointer text-lg font-medium hover:bg-[#ff7222] hover:text-white transition ease-in-out border-[#ff7222] border-[2px] py-4 w-full rounded-md flex justify-between px-5 items-center ${
+                      className={`group cursor-pointer text-lg font-medium hover:bg-[#006CB7] hover:text-white transition ease-in-out border-[#006CB7] border-[2px] py-4 w-full rounded-md flex justify-between px-5 items-center ${
                         selectedService === service
-                          ? "bg-[#ff7222] text-white"
+                          ? "bg-[#006CB7] text-white"
                           : ""
                       }`}
                     >

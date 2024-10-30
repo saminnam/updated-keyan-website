@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import hero from "../assets/hero.png";
+import hero from "../assets/hero2.png";
 
 const logos = [
   "https://firebasestorage.googleapis.com/v0/b/flowspark-1f3e0.appspot.com/o/Tailspark%20Images%2FMicrosoft%20Logo.svg?alt=media&token=d9a0206b-8dfa-407e-af77-5c5d33abfbb3",
@@ -24,22 +24,22 @@ const Hero = () => {
 
   return (
     <>
-      <header>
+      <section>
         {/* Container */}
         <div className="mx-auto mt-10 w-full max-w-7xl px-5 py-16 md:px-10 md:py-20 relative">
           <div className="mx-auto max-w-3xl text-center">
             {/* Title */}
-            <h1 className="mb-4 text-4xl font-bold md:text-6xl" data-aos="fade-down">
-              Build Your Digital Presence with Keyan Technology
+            <h1 className="mb-4 text-4xl font-bold md:text-6xl font-serif" data-aos="fade-down">
+              Build Your Digital Presence with Keyan Technologies
             </h1>
             <p className="mb-6 text-sm text-gray-500 sm:text-xl lg:mb-8" data-aos="fade-down">
-              Keyan Technology offers cutting-edge web and app development
+              Keyan Technologies offers cutting-edge web and app development
               solutions tailored to your business needs.
             </p>
             {/* Button */}
             <a
-              href="#"
-              className="mr-6 inline-block items-center rounded-md hover:bg-transparent hover:text-[#ff7222] border border-[#ff7222] duration-300 transition-transform bg-[#ff7222] px-8 py-4 text-center font-semibold text-white lg:mr-8"
+              href="#services"
+              className="mr-6 inline-block items-center rounded-md hover:bg-transparent hover:text-[#006CB7] border border-[#006CB7] duration-300 transition-all bg-[#006CB7] px-8 py-4 text-center font-semibold text-white lg:mr-8"
             >
               Get Started
             </a>
@@ -49,7 +49,7 @@ const Hero = () => {
             {logos.map((logo, index) => (
               <li
                 key={index}
-                className={`flex justify-center transition-opacity duration-1000 ${
+                className={`flex justify-center transition-opacity duration-1000 z-40 ${
                   index === currentLogoIndex ? "opacity-100" : "opacity-50"
                 }`}
               >
@@ -61,9 +61,9 @@ const Hero = () => {
         <img
           src={hero}
           alt="hero"
-          className="absolute top-0 right-0 hidden md:block"
+          className="absolute top-0 right-0 hidden md:block h-full"
         />
-      </header>
+      </section>
     </>
   );
 };

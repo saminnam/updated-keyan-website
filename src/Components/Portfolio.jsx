@@ -1,14 +1,57 @@
-import React from "react";
+import React,{useState, useEffect} from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import project1 from "../assets/project1.jpg";
-import project2 from "../assets/project2.jpg";
-import project3 from "../assets/project3.jpg";
-import project4 from "../assets/project4.jpg";
-import project5 from "../assets/project5.jpg";
+import axios from "axios";
 
 const Portfolio = () => {
+  // const projects = [
+  //   {
+  //     id: 1,
+  //     image: project1,
+  //     title: "Project 1",
+  //     description: "Web Design",
+  //   },
+  //   {
+  //     id: 2,
+  //     image: project2,
+  //     title: "Project 2",
+  //     description: "Web Design",
+  //   },
+  //   {
+  //     id: 3,
+  //     image: project3,
+  //     title: "Project 3",
+  //     description: "E-Commerce",
+  //   },
+  //   {
+  //     id: 4,
+  //     image: project4,
+  //     title: "Project 4",
+  //     description: "Web Design",
+  //   },
+  //   {
+  //     id: 5,
+  //     image: project5,
+  //     title: "Project 5",
+  //     description: "Web Design",
+  //   },
+  // ];
+  const [projects, setProjects] = useState([]);
+
+  useEffect(() => {
+    fetcher();
+  }, []);
+
+  const fetcher = () => {
+    axios
+      .get("http://localhost:3000/api/portfolio")
+      .then((res) => {
+        setProjects(res.data);
+      })
+      .catch((error) => console.log(error));
+  };
+
   const settings = {
     dots: true, // Enable dots
     className: "center",
@@ -48,7 +91,7 @@ const Portfolio = () => {
           >
             Portfolio
           </h2>
-          <div className="w-0 group-hover:w-40 transition-all duration-500 h-[5px] bg-[#ff7222] rounded"></div>
+          <div className="w-40 lg:w-0 lg:group-hover:w-40 transition-all duration-500 h-[5px] bg-[#006CB7] rounded"></div>
           <p className="mb-8 mt-4 max-w-xl text-base text-center text-gray-500 md:mb-12 md:text-lg lg:mb-16">
             Explore our diverse portfolio showcasing successful software
             solutions that demonstrate our expertise in driving innovation and
@@ -58,74 +101,25 @@ const Portfolio = () => {
         {/* Content */}
         <div className="slider-container">
           <Slider {...settings}>
-            <a
-              href="#"
-              className="rounded-md p-4 lg:p-2"
-              data-aos="zoom-out-up"
-              data-aos-duration="1000"
-            >
-              <img
-                src={project1}
-                alt="Project 1"
-                className="mb-3 inline-block rounded h-60 w-full object-cover lg:w-96"
-              />
-              <p className="mb-1 text-center font-bold">Project 2</p>
-              <p className="text-center text-sm text-gray-500">Web Design</p>
-            </a>
-            <a
-              href="#"
-              className="rounded-md p-4 lg:p-2"
-              data-aos="zoom-out-up"
-              data-aos-duration="2000"
-            >
-              <img
-                src={project2}
-                alt="Project 2"
-                className="mb-3 inline-block rounded h-60  w-full  object-cover lg:w-96"
-              />
-              <p className="mb-1 text-center font-bold">Project 3</p>
-              <p className="text-center text-sm text-gray-500">Web Design</p>
-            </a>
-            <a
-              href="#"
-              className="rounded-md p-4 lg:p-2"
-              data-aos="zoom-out-up"
-              data-aos-duration="3000"
-            >
-              <img
-                src={project3}
-                alt="Project 3"
-                className="mb-3 inline-block rounded h-60 object-cover w-full lg:w-96"
-              />
-              <p className="mb-1 text-center font-bold">Project 4</p>
-              <p className="text-center text-sm text-gray-500">E-Commerce</p>
-            </a>
-            <a
-              href="#"
-              className="rounded-md p-4 lg:p-2"
-              data-aos="zoom-out-up"
-            >
-              <img
-                src={project4}
-                alt="Placeholder"
-                className="mb-3 inline-block rounded h-60 object-cover w-full lg:w-96"
-              />
-              <p className="mb-1 text-center font-bold">Project 5</p>
-              <p className="text-center text-sm text-gray-500">Web Design</p>
-            </a>
-            <a
-              href="#"
-              className="rounded-md p-4 lg:p-2"
-              data-aos="zoom-out-up"
-            >
-              <img
-                src={project5}
-                alt="Placeholder"
-                className="mb-3 inline-block rounded h-60 object-cover w-full lg:w-96"
-              />
-              <p className="mb-1 text-center font-bold">Project 1</p>
-              <p className="text-center text-sm text-gray-500">Web Design</p>
-            </a>
+            {projects.map((project) => (
+              <a
+                key={project.id}
+                href="#"
+                className="rounded-md p-4 lg:p-2"
+                data-aos="zoom-out-up"
+                data-aos-duration={project.id * 1000} // Dynamically set the duration
+              >
+                <img
+                  src={`http://localhost:3000/Images/${project.image}`}
+                  alt={project.title}
+                  className="mb-3 inline-block rounded h-60 w-full object-cover lg:w-96"
+                />
+                <p className="mb-1 text-center font-bold">{project.title}</p>
+                <p className="text-center text-sm text-gray-500">
+                  {project.description}
+                </p>
+              </a>
+            ))}
           </Slider>
         </div>
       </div>

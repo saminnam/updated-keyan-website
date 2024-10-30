@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import logoblack from "../assets/keyan.png";
+import logoblack from "../assets/keyan1.png";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
@@ -28,13 +28,13 @@ const Navbar = () => {
       <nav className="font-inter mx-auto h-auto w-full max-w-screen-2xl lg:relative lg:top-0 bg-transparent">
         <div className="flex flex-col px-6 py-6 lg:flex-row lg:items-center lg:justify-between lg:px-20 lg:py-4">
           <a href="/">
-            <img src={logoblack} alt="" className="w-[150px]" />
+            <img src={logoblack} alt="" className="w-[180px]" />
           </a>
           <div className="hidden lg:flex lg:flex-row lg:space-x-6">
             <Link to={"/"}>
               <a
                 href="/"
-                className="font-inter font-medium active:text-[#ff7222] rounded-lg px-3 py-4 hover:text-[#ff7222]"
+                className="font-inter font-medium active:text-[#006CB7] rounded-lg px-3 py-4 hover:text-[#006CB7]"
               >
                 HOME
               </a>
@@ -42,7 +42,7 @@ const Navbar = () => {
             <Link to={"/about"}>
               <a
                 href="/about"
-                className="font-inter font-medium active:text-[#ff7222] rounded-lg px-3 py-4 hover:text-[#ff7222]"
+                className="font-inter font-medium active:text-[#006CB7] rounded-lg px-3 py-4 hover:text-[#006CB7]"
               >
                 ABOUT
               </a>
@@ -50,7 +50,7 @@ const Navbar = () => {
             <Link to={"/services"}>
               <a
                 href="/services"
-                className="font-inter font-medium active:text-[#ff7222] rounded-lg px-3 py-4 hover:text-[#ff7222]"
+                className="font-inter font-medium active:text-[#006CB7] rounded-lg px-3 py-4 hover:text-[#006CB7]"
               >
                 SERVICES
               </a>
@@ -58,7 +58,7 @@ const Navbar = () => {
             <Link to={"/portfolios"}>
               <a
                 href="/portfolios"
-                className="font-inter font-medium active:text-[#ff7222] rounded-lg px-3 py-4 hover:text-[#ff7222]"
+                className="font-inter font-medium active:text-[#006CB7] rounded-lg px-3 py-4 hover:text-[#006CB7]"
               >
                 PORTFOLIO
               </a>
@@ -66,7 +66,7 @@ const Navbar = () => {
             <Link to={"/blogs"}>
               <a
                 href="/blogs"
-                className="font-inter font-medium active:text-[#ff7222] rounded-lg px-3 py-4 hover:text-[#ff7222]"
+                className="font-inter font-medium active:text-[#006CB7] rounded-lg px-3 py-4 hover:text-[#006CB7]"
               >
                 BLOG
               </a>
@@ -74,7 +74,7 @@ const Navbar = () => {
             <Link to={"/contact"}>
               <a
                 href="/contact"
-                className="font-inter font-medium active:text-[#ff7222] rounded-lg px-3 py-4 hover:text-[#ff7222]"
+                className="font-inter font-medium active:text-[#006CB7] rounded-lg px-3 py-4 hover:text-[#006CB7]"
               >
                 CONTACT
               </a>
@@ -123,47 +123,47 @@ const Navbar = () => {
               isMobileMenuOpen ? "translate-x-0" : "-translate-x-full"
             }`}
           >
-            <Link to={"/"}>
-              <a href="/" className="font-inter px-4 py-2 hover:text-[#ff7222]">
+            <Link to={"/"} onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
+              <a href="/" className="font-inter px-4 py-2 hover:text-[#006CB7]">
                 HOME
               </a>
             </Link>
-            <Link to={"/about"}>
+            <Link to={"/about"} onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
               <a
                 href="/about"
-                className="font-inter px-4 py-2 hover:text-[#ff7222]"
+                className="font-inter px-4 py-2 hover:text-[#006CB7]"
               >
                 ABOUT
               </a>
             </Link>
-            <Link to={"/services"}>
+            <Link to={"/services"} onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
               <a
                 href="/services"
-                className="font-inter px-4 py-2 hover:text-[#ff7222]"
+                className="font-inter px-4 py-2 hover:text-[#006CB7]"
               >
                 SERVICES
               </a>
             </Link>
-            <Link to={"/portfolios"}>
+            <Link to={"/portfolios"} onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
               <a
                 href="/portfolios"
-                className="font-inter px-4 py-2 hover:text-[#ff7222]"
+                className="font-inter px-4 py-2 hover:text-[#006CB7]"
               >
                 PORTFOLIO
               </a>
             </Link>
-            <Link to={"/blogs"}>
+            <Link to={"/blogs"} onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
               <a
                 href="/blogs"
-                className="font-inter px-4 py-2 hover:text-[#ff7222]"
+                className="font-inter px-4 py-2 hover:text-[#006CB7]"
               >
                 BLOG
               </a>
             </Link>
-            <Link to={"/contact"}>
+            <Link to={"/contact"} onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
               <a
                 href="/contact"
-                className="font-inter px-4 py-2 hover:text-[#ff7222]"
+                className="font-inter px-4 py-2 hover:text-[#006CB7]"
               >
                 CONTACT
               </a>
