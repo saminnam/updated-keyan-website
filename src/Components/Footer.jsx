@@ -1,4 +1,3 @@
-import React from "react";
 import logowhite from "../assets/keyan-white1.png";
 import { Link } from "react-router-dom";
 import { IoMailOpenOutline } from "react-icons/io5";
@@ -8,208 +7,172 @@ import { AiOutlineYoutube } from "react-icons/ai";
 
 const Footer = () => {
   return (
-    <section class="py-10 bg-black sm:pt-16 lg:pt-24">
-      <div class="px-4 mx-auto lg:px-20 w-full max-w-screen-2xl">
-        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-12 gap-y-12 gap-x-8 xl:gap-x-12">
-          <div class="col-span-2 md:col-span-4 xl:pr-8">
+    <section className="pt-10 bg-black sm:pt-16">
+      <div className="w-full max-w-screen-2xl">
+        <div className="grid grid-cols-2 px-4 mx-auto lg:px-20 md:grid-cols-4 lg:grid-cols-12 gap-y-12 gap-x-8 xl:gap-x-12">
+          <div className="col-span-2 md:col-span-4 xl:pr-8">
             <a href="/">
-              <img class="w-[180px]" src={logowhite} alt="" />
+              <img className="w-[180px]" src={logowhite} alt="logo" />
             </a>
-
-            <p class="text-base leading-relaxed text-white mt-7">
+            <p className="text-base leading-relaxed text-white mt-7">
               Building the Future of Technology, One Line of Code at a Time.
               Custom Software Solutions that Drive Results.
             </p>
           </div>
-
-          <div class="lg:col-span-2">
-            <p class="text-base font-semibold text-white">Company</p>
-
-            <ul class="mt-6 space-y-5">
+          <div className="lg:col-span-2">
+            <p className="text-base font-semibold text-white">Company</p>
+            <div className="bg-[#006CB7] mt-2 rounded w-14 h-1"></div>
+            <ul className="mt-6 space-y-5">
               <li>
-                <Link to={"/about"}>
-                  <a
-                    href="/about"
-                    class="flex text-sm text-white transition-all duration-200 hover:text-[#006CB7] focus:text-[#006CB7]"
-                  >
-                    {" "}
-                    About{" "}
-                  </a>
+                <Link
+                  to={"/about"}
+                  className="flex text-sm  hover:translate-x-2 text-white transition-all duration-300 hover:text-[#006CB7] focus:text-[#006CB7]"
+                >
+                  About
                 </Link>
               </li>
-
               <li>
-                <Link to={"/services"}>
-                  <a
-                    href="/services"
-                    class="flex text-sm text-white transition-all duration-200 hover:text-[#006CB7] focus:text-[#006CB7]"
-                  >
-                    {" "}
-                    Services
-                  </a>
+                <Link
+                  to={"/services"}
+                  className="flex text-sm  hover:translate-x-2 text-white transition-all duration-300 hover:text-[#006CB7] focus:text-[#006CB7]"
+                >
+                  Services
                 </Link>
               </li>
-
               <li>
-                <Link to={"/portfolios"}>
-                  <a
-                    href="/portfolios"
-                    class="flex text-sm text-white transition-all duration-200 hover:text-[#006CB7] focus:text-[#006CB7]"
-                  >
-                    {" "}
-                    Portfolio{" "}
-                  </a>
+                <Link
+                  to={"/portfolios"}
+                  className="flex text-sm  hover:translate-x-2 text-white transition-all duration-300 hover:text-[#006CB7] focus:text-[#006CB7]"
+                >
+                  Portfolio
                 </Link>
               </li>
-
               <li>
                 <Link
                   to={"/career"}
-                  class="flex text-sm text-white transition-all duration-200 hover:text-[#006CB7] focus:text-[#006CB7]"
+                  className="flex text-sm  hover:translate-x-2 text-white transition-all duration-300 hover:text-[#006CB7] focus:text-[#006CB7]"
                 >
-                  {" "}
-                  Career{" "}
+                  Career
                 </Link>
               </li>
             </ul>
           </div>
-
-          <div class="lg:col-span-2">
-            <p class="text-base font-semibold text-white">Services</p>
-
-            <ul class="mt-6 space-y-4">
+          <div className="lg:col-span-2">
+            <p className="text-base font-semibold text-white">Services</p>
+            <div className="bg-[#006CB7] mt-2 rounded w-14 h-1"></div>
+            <ul className="mt-6 space-y-4">
               <li>
                 <Link
                   to={"/services"}
-                  class="flex text-sm text-white transition-all duration-200 hover:text-[#006CB7] focus:text-[#006CB7]"
+                  className="flex text-sm  hover:translate-x-2 text-white transition-all duration-300 hover:text-[#006CB7] focus:text-[#006CB7]"
                 >
-                  {" "}
-                  Web Development{" "}
+                  Web Development
                 </Link>
               </li>
-
               <li>
                 <Link
                   to={"/services"}
-                  class="flex text-sm text-white transition-all duration-200 hover:text-[#006CB7] focus:text-[#006CB7]"
+                  className="flex text-sm  hover:translate-x-2 text-white transition-all duration-300 hover:text-[#006CB7] focus:text-[#006CB7]"
                 >
-                  {" "}
-                  App Development{" "}
+                  App Development
                 </Link>
               </li>
-
               <li>
                 <Link
                   to={"/services"}
-                  class="flex text-sm text-white transition-all duration-200 hover:text-[#006CB7] focus:text-[#006CB7]"
+                  className="flex text-sm  hover:translate-x-2 text-white transition-all duration-300 hover:text-[#006CB7] focus:text-[#006CB7]"
                 >
-                  {" "}
-                  Software Development{" "}
+                  Software Development
                 </Link>
               </li>
-
               <li>
                 <Link
                   to={"/services"}
-                  class="flex text-sm text-white transition-all duration-200 hover:text-[#006CB7] focus:text-[#006CB7]"
+                  className="flex text-sm  hover:translate-x-2 text-white transition-all duration-300 hover:text-[#006CB7] focus:text-[#006CB7]"
                 >
-                  {" "}
-                  Web Design{" "}
+                  Web Design
                 </Link>
               </li>
             </ul>
           </div>
-
-          <div class="lg:col-span-2">
-            <p class="text-base font-semibold text-white">Websites</p>
-
-            <ul class="mt-6 space-y-5">
+          <div className="lg:col-span-2">
+            <p className="text-base font-semibold text-white">Websites</p>
+            <div className="bg-[#006CB7] mt-2 rounded w-14 h-1"></div>
+            <ul className="mt-6 space-y-5">
               <li>
                 <Link
                   to={"/portfolios"}
-                  class="flex text-sm text-white transition-all duration-200 hover:text-[#006CB7] focus:text-[#006CB7]"
+                  className="flex text-sm  hover:translate-x-2 text-white transition-all duration-300 hover:text-[#006CB7] focus:text-[#006CB7]"
                 >
-                  {" "}
-                  E-Commerce{" "}
+                  E-Commerce
                 </Link>
               </li>
-
               <li>
                 <Link
                   to={"/portfolios"}
-                  class="flex text-sm text-white transition-all duration-200 hover:text-[#006CB7] focus:text-[#006CB7]"
+                  className="flex text-sm  hover:translate-x-2 text-white transition-all duration-300 hover:text-[#006CB7] focus:text-[#006CB7]"
                 >
-                  {" "}
-                  Booking Applications{" "}
+                  Booking Applications
                 </Link>
               </li>
-
               <li>
                 <Link
                   to={"/portfolios"}
-                  class="flex text-sm text-white transition-all duration-200 hover:text-[#006CB7] focus:text-[#006CB7]"
+                  className="flex text-sm  hover:translate-x-2 text-white transition-all duration-300 hover:text-[#006CB7] focus:text-[#006CB7]"
                 >
-                  {" "}
-                  Healthcare Services{" "}
+                  Healthcare Services
                 </Link>
               </li>
-
               <li>
                 <Link
                   to={"/portfolios"}
-                  class="flex text-sm text-white transition-all duration-200 hover:text-[#006CB7] focus:text-[#006CB7]"
+                  className="flex text-sm  hover:translate-x-2 text-white transition-all duration-300 hover:text-[#006CB7] focus:text-[#006CB7]"
                 >
-                  {" "}
-                  Social Media Platform{" "}
+                  Social Media Platform
                 </Link>
               </li>
             </ul>
           </div>
-
-          <div class="lg:col-span-2">
-            <p class="text-base font-semibold text-white">Contact us</p>
+          <div className="lg:col-span-2">
+            <p className="text-base font-semibold text-white">Contact us</p>
+            <div className="bg-[#006CB7] mt-2 rounded w-14 h-1"></div>
             <div className="flex justify-center items-center text-white mt-4 gap-2">
-              <IoMailOpenOutline className="text-2xl" />
+              <IoMailOpenOutline classNameName="text-2xl" />
               <p className="">info@inetztech.com </p>
             </div>
           </div>
         </div>
-
-        <hr class="mt-16 mb-10 border-gray-200" />
-
-        <div class="sm:flex sm:items-center sm:justify-between">
-          <p class="text-sm text-white">
+        <hr className="mt-16 border-gray-200" />
+        <div className="sm:flex px-4 mx-auto lg:px-20 sm:items-center sm:justify-between bg-[#0a0f14] py-5">
+          <p className="text-sm text-white">
             © Copyright 2024, All Rights Reserved
           </p>
-
-          <ul class="flex items-center mt-5 space-x-3 md:order-3 sm:mt-0">
+          <ul className="flex items-center mt-5 space-x-3 md:order-3 sm:mt-0">
             <li>
               <a
                 href="https://www.inetztech.com/"
-                class="flex items-center justify-center text-white transition-all duration-200 bg-transparent border border-gray-300 rounded-full w-7 h-7 focus:bg-[#006CB7] hover:text-white focus:text-white hover:bg-[#006CB7] hover:border-[#006CB7] focus:border-[#006CB7]"
+                className="flex items-center justify-center text-white transition-all duration-300 bg-transparent border border-gray-300 rounded-full w-7 h-7 focus:bg-[#006CB7] hover:text-white focus:text-white hover:bg-[#006CB7] hover:border-[#006CB7] focus:border-[#006CB7]"
               >
                 <FaGlobeEurope />
               </a>
             </li>
-
             <li>
               <a
                 href="https://wa.me/919840234475"
-                class="flex items-center justify-center text-white transition-all duration-200 bg-transparent border border-gray-300 rounded-full w-7 h-7 focus:bg-[#006CB7] hover:text-white focus:text-white hover:bg-[#006CB7] hover:border-[#006CB7] focus:border-[#006CB7]"
+                className="flex items-center justify-center text-white transition-all duration-300 bg-transparent border border-gray-300 rounded-full w-7 h-7 focus:bg-[#006CB7] hover:text-white focus:text-white hover:bg-[#006CB7] hover:border-[#006CB7] focus:border-[#006CB7]"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <FaWhatsapp />
               </a>
             </li>
-
             <li>
               <a
                 href="https://www.instagram.com/inetz_technologies_vadapalani?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
-                class="flex items-center justify-center text-white transition-all duration-200 bg-transparent border border-gray-300 rounded-full w-7 h-7 focus:bg-[#006CB7] hover:text-white focus:text-white hover:bg-[#006CB7] hover:border-[#006CB7] focus:border-[#006CB7]"
+                className="flex items-center justify-center text-white transition-all duration-300 bg-transparent border border-gray-300 rounded-full w-7 h-7 focus:bg-[#006CB7] hover:text-white focus:text-white hover:bg-[#006CB7] hover:border-[#006CB7] focus:border-[#006CB7]"
               >
                 <svg
-                  class="w-4 h-4"
+                  className="w-4 h-4"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
                   fill="currentColor"
@@ -220,11 +183,10 @@ const Footer = () => {
                 </svg>
               </a>
             </li>
-
             <li>
               <a
                 href="www.youtube.com/@Inetztechnologies"
-                class="flex items-center justify-center text-white transition-all duration-200 bg-transparent border border-gray-300 rounded-full w-7 h-7 focus:bg-[#006CB7] hover:text-white focus:text-white hover:bg-[#006CB7] hover:border-[#006CB7] focus:border-[#006CB7]"
+                className="flex items-center justify-center text-white transition-all duration-300 bg-transparent border border-gray-300 rounded-full w-7 h-7 focus:bg-[#006CB7] hover:text-white focus:text-white hover:bg-[#006CB7] hover:border-[#006CB7] focus:border-[#006CB7]"
               >
                 <AiOutlineYoutube />
               </a>

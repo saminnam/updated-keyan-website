@@ -1,6 +1,4 @@
-import React from 'react'
-
-const CommonHero = ({title}) => {
+const GlobalTitle = ({title}) => {
   return (
     <>
     <section className='relative bg-hero-pattern bg-cover bg-no-repeat py-32 w-full h-auto'>
@@ -13,4 +11,4 @@ const CommonHero = ({title}) => {
   )
 }
 
-export default CommonHero
+export default GlobalTitle

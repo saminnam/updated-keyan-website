@@ -11,7 +11,6 @@ export default {
         'webservice-pattern': "url('./assets/web-service-bg.png')",
         'service-pattern': "url('./assets/service_bg.jpg')",
         'common-pattern': "url('./assets/hero.png')",
-        // You can add more images if needed
       },
     },
   },

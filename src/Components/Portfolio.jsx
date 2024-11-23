@@ -1,42 +1,10 @@
-import React,{useState, useEffect} from "react";
+import { useState, useEffect } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import axios from "axios";
+import { apiRequest } from "./Api";
 
 const Portfolio = () => {
-  // const projects = [
-  //   {
-  //     id: 1,
-  //     image: project1,
-  //     title: "Project 1",
-  //     description: "Web Design",
-  //   },
-  //   {
-  //     id: 2,
-  //     image: project2,
-  //     title: "Project 2",
-  //     description: "Web Design",
-  //   },
-  //   {
-  //     id: 3,
-  //     image: project3,
-  //     title: "Project 3",
-  //     description: "E-Commerce",
-  //   },
-  //   {
-  //     id: 4,
-  //     image: project4,
-  //     title: "Project 4",
-  //     description: "Web Design",
-  //   },
-  //   {
-  //     id: 5,
-  //     image: project5,
-  //     title: "Project 5",
-  //     description: "Web Design",
-  //   },
-  // ];
   const [projects, setProjects] = useState([]);
 
   useEffect(() => {
@@ -44,16 +12,17 @@ const Portfolio = () => {
   }, []);
 
   const fetcher = () => {
-    axios
-      .get("http://localhost:3000/api/portfolio")
-      .then((res) => {
-        setProjects(res.data);
+    apiRequest("get", "portfolio")
+      .then((data) => {
+        setProjects(data);
       })
-      .catch((error) => console.log(error));
+      .catch((error) => {
+        console.log("Failed to show projects", error);
+      });
   };
 
   const settings = {
-    dots: true, // Enable dots
+    dots: true, 
     className: "center",
     centerMode: true,
     infinite: true,
@@ -79,10 +48,8 @@ const Portfolio = () => {
   };
 
   return (
-    <section className="group">
-      {/* Container */}
+    <section className="group bg-blue-50">
       <div className="mx-auto w-full max-w-7xl px-5 py-16 md:px-10 md:py-20">
-        {/* Title */}
         <div className="flex items-center justify-center flex-col gap-3">
           <h2
             className="text-3xl font-bold md:text-5xl font-serif"
@@ -98,30 +65,33 @@ const Portfolio = () => {
             delivering exceptional results for our clients.
           </p>
         </div>
-        {/* Content */}
-        <div className="slider-container">
-          <Slider {...settings}>
-            {projects.map((project) => (
-              <a
-                key={project.id}
-                href="#"
-                className="rounded-md p-4 lg:p-2"
-                data-aos="zoom-out-up"
-                data-aos-duration={project.id * 1000} // Dynamically set the duration
-              >
-                <img
-                  src={`http://localhost:3000/Images/${project.image}`}
-                  alt={project.title}
-                  className="mb-3 inline-block rounded h-60 w-full object-cover lg:w-96"
-                />
-                <p className="mb-1 text-center font-bold">{project.title}</p>
-                <p className="text-center text-sm text-gray-500">
-                  {project.description}
-                </p>
-              </a>
-            ))}
-          </Slider>
-        </div>
+        {projects.length > 0 ? (
+          <div className="slider-container">
+            <Slider {...settings}>
+              {projects.map((project) => (
+                <a
+                  key={project.id}
+                  href="#"
+                  className="rounded-md p-4 lg:p-2"
+                  data-aos="zoom-out-up"
+                  data-aos-duration={project.id * 1000}
+                >
+                  <img
+                    src={`http://localhost:3000/Images/${project.image}`}
+                    alt={project.title}
+                    className="mb-3 inline-block rounded h-60 w-full object-cover lg:w-96"
+                  />
+                  <p className="mb-1 text-center font-bold">{project.title}</p>
+                  <p className="text-center text-sm text-gray-500">
+                    {project.description}
+                  </p>
+                </a>
+              ))}
+            </Slider>
+          </div>
+        ) : (
+          <div className="text-center">Loading Portfolios...</div>
+        )}
       </div>
     </section>
   );
