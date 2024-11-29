@@ -83,7 +83,7 @@ const Header = () => {
             >
               <path
                 d="M3.75 12H20.25"
-                stroke="#160042"
+                // stroke="#160042"
                 strokeWidth="2"
                 strokeLinecap="round"
                 strokeLinejoin="round"
