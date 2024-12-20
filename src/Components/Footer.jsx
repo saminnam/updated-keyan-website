@@ -1,4 +1,4 @@
-import logowhite from "../assets/keyan-white1.png";
+import logowhite from "../assets/keyan1.png";
 import { Link } from "react-router-dom";
 import { IoMailOpenOutline } from "react-icons/io5";
 import { FaWhatsapp } from "react-icons/fa";
@@ -7,26 +7,33 @@ import { AiOutlineYoutube } from "react-icons/ai";
 
 const Footer = () => {
   return (
-    <section className="pt-10 bg-black sm:pt-16">
+    <section className="pt-10 sm:pt-16 bg-footer-pattern bg-cover bg-no-repeat">
       <div className="w-full max-w-screen-2xl">
         <div className="grid grid-cols-2 px-4 mx-auto lg:px-20 md:grid-cols-4 lg:grid-cols-12 gap-y-12 gap-x-8 xl:gap-x-12">
           <div className="col-span-2 md:col-span-4 xl:pr-8">
             <a href="/">
               <img className="w-[180px]" src={logowhite} alt="logo" />
             </a>
-            <p className="text-base leading-relaxed text-white mt-7">
+            <p className="text-base leading-relaxed text-black mt-7">
               Building the Future of Technology, One Line of Code at a Time.
               Custom Software Solutions that Drive Results.
             </p>
+            <Link
+              to={"/contact"}
+              className="flex mt-5 justify-between cursor-pointer w-[230px] shadow-sm shadow-white border p-3 rounded"
+            >
+              <p>info@inetztech.com</p>
+              <IoMailOpenOutline className="text-2xl" />
+            </Link>
           </div>
           <div className="lg:col-span-2">
-            <p className="text-base font-semibold text-white">Company</p>
+            <p className="text-base font-semibold text-black">Company</p>
             <div className="bg-[#006CB7] mt-2 rounded w-14 h-1"></div>
-            <ul className="mt-6 space-y-5">
+            <ul className="mt-6 space-y-3">
               <li>
                 <Link
                   to={"/about"}
-                  className="flex text-sm  hover:translate-x-2 text-white transition-all duration-300 hover:text-[#006CB7] focus:text-[#006CB7]"
+                  className="flex text-[16px]  hover:translate-x-2 text-black transition-all duration-300 hover:text-white focus:text-white"
                 >
                   About
                 </Link>
@@ -34,7 +41,7 @@ const Footer = () => {
               <li>
                 <Link
                   to={"/services"}
-                  className="flex text-sm  hover:translate-x-2 text-white transition-all duration-300 hover:text-[#006CB7] focus:text-[#006CB7]"
+                  className="flex text-[16px]  hover:translate-x-2 text-black transition-all duration-300 hover:text-white focus:text-white"
                 >
                   Services
                 </Link>
@@ -42,7 +49,7 @@ const Footer = () => {
               <li>
                 <Link
                   to={"/portfolios"}
-                  className="flex text-sm  hover:translate-x-2 text-white transition-all duration-300 hover:text-[#006CB7] focus:text-[#006CB7]"
+                  className="flex text-[16px]  hover:translate-x-2 text-black transition-all duration-300 hover:text-white focus:text-white"
                 >
                   Portfolio
                 </Link>
@@ -50,7 +57,7 @@ const Footer = () => {
               <li>
                 <Link
                   to={"/career"}
-                  className="flex text-sm  hover:translate-x-2 text-white transition-all duration-300 hover:text-[#006CB7] focus:text-[#006CB7]"
+                  className="flex text-[16px]  hover:translate-x-2 text-black transition-all duration-300 hover:text-white focus:text-white"
                 >
                   Career
                 </Link>
@@ -58,13 +65,13 @@ const Footer = () => {
             </ul>
           </div>
           <div className="lg:col-span-2">
-            <p className="text-base font-semibold text-white">Services</p>
+            <p className="text-base font-semibold text-black">Services</p>
             <div className="bg-[#006CB7] mt-2 rounded w-14 h-1"></div>
-            <ul className="mt-6 space-y-4">
+            <ul className="mt-6 space-y-3">
               <li>
                 <Link
                   to={"/services"}
-                  className="flex text-sm  hover:translate-x-2 text-white transition-all duration-300 hover:text-[#006CB7] focus:text-[#006CB7]"
+                  className="flex text-[16px]  hover:translate-x-2 text-black transition-all duration-300 hover:text-white focus:text-white"
                 >
                   Web Development
                 </Link>
@@ -72,7 +79,7 @@ const Footer = () => {
               <li>
                 <Link
                   to={"/services"}
-                  className="flex text-sm  hover:translate-x-2 text-white transition-all duration-300 hover:text-[#006CB7] focus:text-[#006CB7]"
+                  className="flex text-[16px]  hover:translate-x-2 text-black transition-all duration-300 hover:text-white focus:text-white"
                 >
                   App Development
                 </Link>
@@ -80,29 +87,29 @@ const Footer = () => {
               <li>
                 <Link
                   to={"/services"}
-                  className="flex text-sm  hover:translate-x-2 text-white transition-all duration-300 hover:text-[#006CB7] focus:text-[#006CB7]"
+                  className="flex text-[16px]  hover:translate-x-2 text-black transition-all duration-300 hover:text-white focus:text-white"
                 >
                   Software Development
                 </Link>
               </li>
               <li>
                 <Link
-                  to={"/services"}
-                  className="flex text-sm  hover:translate-x-2 text-white transition-all duration-300 hover:text-[#006CB7] focus:text-[#006CB7]"
+                  to={"/landingpage"}
+                  className="flex text-[16px]  hover:translate-x-2 text-black transition-all duration-300 hover:text-white focus:text-white"
                 >
-                  Web Design
+                  Landing Page
                 </Link>
               </li>
             </ul>
           </div>
           <div className="lg:col-span-2">
-            <p className="text-base font-semibold text-white">Websites</p>
+            <p className="text-base font-semibold text-black">Websites</p>
             <div className="bg-[#006CB7] mt-2 rounded w-14 h-1"></div>
-            <ul className="mt-6 space-y-5">
+            <ul className="mt-6 space-y-3">
               <li>
                 <Link
                   to={"/portfolios"}
-                  className="flex text-sm  hover:translate-x-2 text-white transition-all duration-300 hover:text-[#006CB7] focus:text-[#006CB7]"
+                  className="flex text-[16px]  hover:translate-x-2 text-black transition-all duration-300 hover:text-white focus:text-white"
                 >
                   E-Commerce
                 </Link>
@@ -110,7 +117,7 @@ const Footer = () => {
               <li>
                 <Link
                   to={"/portfolios"}
-                  className="flex text-sm  hover:translate-x-2 text-white transition-all duration-300 hover:text-[#006CB7] focus:text-[#006CB7]"
+                  className="flex text-[16px]  hover:translate-x-2 text-black transition-all duration-300 hover:text-white focus:text-white"
                 >
                   Booking Applications
                 </Link>
@@ -118,7 +125,7 @@ const Footer = () => {
               <li>
                 <Link
                   to={"/portfolios"}
-                  className="flex text-sm  hover:translate-x-2 text-white transition-all duration-300 hover:text-[#006CB7] focus:text-[#006CB7]"
+                  className="flex text-[16px]  hover:translate-x-2 text-black transition-all duration-300 hover:text-white focus:text-white"
                 >
                   Healthcare Services
                 </Link>
@@ -126,7 +133,7 @@ const Footer = () => {
               <li>
                 <Link
                   to={"/portfolios"}
-                  className="flex text-sm  hover:translate-x-2 text-white transition-all duration-300 hover:text-[#006CB7] focus:text-[#006CB7]"
+                  className="flex text-[16px]  hover:translate-x-2 text-black transition-all duration-300 hover:text-white focus:text-white"
                 >
                   Social Media Platform
                 </Link>
@@ -134,24 +141,29 @@ const Footer = () => {
             </ul>
           </div>
           <div className="lg:col-span-2">
-            <p className="text-base font-semibold text-white">Contact us</p>
+            <p className="text-base font-semibold text-black">Reach Us</p>
             <div className="bg-[#006CB7] mt-2 rounded w-14 h-1"></div>
-            <div className="flex justify-center items-center text-white mt-4 gap-2">
-              <IoMailOpenOutline classNameName="text-2xl" />
-              <p className="">info@inetztech.com </p>
+            <div className="mt-6">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.7967445171817!2d80.20484647484274!3d13.048605987273925!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5266c3af68c22d%3A0xb039199ab02199d6!2sDoshi%20Gardens!5e0!3m2!1sen!2sin!4v1734346646507!5m2!1sen!2sin"
+                className="w-44 h-32 rounded"
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              ></iframe>
             </div>
           </div>
         </div>
-        <hr className="mt-16 border-gray-200" />
-        <div className="sm:flex px-4 mx-auto lg:px-20 sm:items-center sm:justify-between bg-[#0a0f14] py-5">
-          <p className="text-sm text-white">
+        {/* <hr className="mt-16 border-gray-200" /> */}
+        <div className="sm:flex px-4 mx-auto mt-16 lg:px-20 sm:items-center sm:justify-between bg-[#006CB7] py-5">
+          <p className="text-[16px] text-white">
             © Copyright 2024, All Rights Reserved
           </p>
           <ul className="flex items-center mt-5 space-x-3 md:order-3 sm:mt-0">
             <li>
               <a
                 href="https://www.inetztech.com/"
-                className="flex items-center justify-center text-white transition-all duration-300 bg-transparent border border-gray-300 rounded-full w-7 h-7 focus:bg-[#006CB7] hover:text-white focus:text-white hover:bg-[#006CB7] hover:border-[#006CB7] focus:border-[#006CB7]"
+                className="flex items-center justify-center text-white transition-all duration-300 bg-transparent border border-white rounded-full w-7 h-7 focus:bg-[#006CB7] hover:text-[#2986fe] focus:text-white hover:bg-white hover:border-[#006CB7] focus:border-[#006CB7]"
               >
                 <FaGlobeEurope />
               </a>
@@ -159,7 +171,7 @@ const Footer = () => {
             <li>
               <a
                 href="https://wa.me/919840234475"
-                className="flex items-center justify-center text-white transition-all duration-300 bg-transparent border border-gray-300 rounded-full w-7 h-7 focus:bg-[#006CB7] hover:text-white focus:text-white hover:bg-[#006CB7] hover:border-[#006CB7] focus:border-[#006CB7]"
+                className="flex items-center justify-center text-white transition-all duration-300 bg-transparent border border-white rounded-full w-7 h-7 focus:bg-[#006CB7] hover:text-[#2986fe] focus:text-white hover:bg-white hover:border-[#006CB7] focus:border-[#006CB7]"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -169,7 +181,7 @@ const Footer = () => {
             <li>
               <a
                 href="https://www.instagram.com/inetz_technologies_vadapalani?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
-                className="flex items-center justify-center text-white transition-all duration-300 bg-transparent border border-gray-300 rounded-full w-7 h-7 focus:bg-[#006CB7] hover:text-white focus:text-white hover:bg-[#006CB7] hover:border-[#006CB7] focus:border-[#006CB7]"
+                className="flex items-center justify-center text-white transition-all duration-300 bg-transparent border border-white rounded-full w-7 h-7 focus:bg-[#006CB7] hover:text-[#2986fe] focus:text-white hover:bg-white hover:border-[#006CB7] focus:border-[#006CB7]"
               >
                 <svg
                   className="w-4 h-4"
@@ -186,7 +198,7 @@ const Footer = () => {
             <li>
               <a
                 href="www.youtube.com/@Inetztechnologies"
-                className="flex items-center justify-center text-white transition-all duration-300 bg-transparent border border-gray-300 rounded-full w-7 h-7 focus:bg-[#006CB7] hover:text-white focus:text-white hover:bg-[#006CB7] hover:border-[#006CB7] focus:border-[#006CB7]"
+                className="flex items-center justify-center text-white transition-all duration-300 bg-transparent border border-white rounded-full w-7 h-7 focus:bg-[#006CB7] hover:text-[#2986fe] focus:text-white hover:bg-white hover:border-[#006CB7] focus:border-[#006CB7]"
               >
                 <AiOutlineYoutube />
               </a>

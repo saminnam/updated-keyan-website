@@ -6,6 +6,7 @@ import img1 from "../assets/webdevelopment.png";
 import img2 from "../assets/software.png";
 import img3 from "../assets/appdevelopment.png";
 import img4 from "../assets/graph.png";
+import img5 from "../assets/landing-page.jpeg";
 
 const ServicePage = () => {
   const [openFAQ, setOpenFAQ] = useState(null);
@@ -83,6 +84,14 @@ const ServicePage = () => {
         "Whether it's through digital media, print, or packaging, we ensure your brand is consistently represented across all platforms with stunning visuals that capture attention and communicate your message clearly.",
       image: img4,
     },
+    "Landing Pages": {
+      title: "Landing Page Design",
+      description1:
+        "Our landing page design services are focused on creating high-converting pages tailored to your goals. Whether you're looking to generate leads, promote a product, or increase sales, we craft visually appealing and user-friendly landing pages that drive results.",
+      description2:
+        "From responsive layouts to compelling CTAs, we ensure every element of your landing page is optimized for user engagement and conversion. Let us help you build pages that not only attract attention but also deliver measurable business outcomes.",
+      image: img5,
+    },
   };
 
   return (
@@ -109,7 +118,7 @@ const ServicePage = () => {
                 ))}
               </div>
               <div className="flex flex-col lg:w-[450px] w-full bg-slate-200 items-center gap-8 py-20 px-28 text-center rounded-md">
-                <img src={tag} alt="" />
+                <img src={tag} alt="img" />
                 <div className="flex flex-col items-center gap-1">
                   <p className="text-xl font-medium">Call Us Anytime</p>
                   <h4 className="text-2xl font-medium">
@@ -141,7 +150,11 @@ const ServicePage = () => {
             </div>
             {/* Features Section */}
             <div className="mt-10 flex items-start lg:flex-row flex-col justify-between gap-8">
-              <div className="flex-1 shadow-lg p-5 group">
+              <div
+                className="flex-1 shadow-lg p-5"
+                data-aos="flip-left"
+                data-aos-duration="1500"
+              >
                 <i className="bi bi-code-slash text-4xl text-blue-600"></i>
                 <h3 className="font-medium text-xl py-3">
                   Innovative Solutions
@@ -151,7 +164,11 @@ const ServicePage = () => {
                   solutions that give you a competitive edge.
                 </p>
               </div>
-              <div className="flex-1 shadow-lg p-5">
+              <div
+                className="flex-1 shadow-lg p-5"
+                data-aos="flip-left"
+                data-aos-duration="1500"
+              >
                 <i className="bi bi-shield-check text-4xl text-green-600"></i>
                 <h3 className="font-medium text-xl py-3">Robust Security</h3>
                 <p className="text-gray-600 text-lg text-justify">
@@ -159,7 +176,11 @@ const ServicePage = () => {
                   multi-factor authentication.
                 </p>
               </div>
-              <div className="flex-1 shadow-lg p-5">
+              <div
+                className="flex-1 shadow-lg p-5"
+                data-aos="flip-left"
+                data-aos-duration="1500"
+              >
                 <i className="bi bi-graph-up-arrow text-4xl text-red-600"></i>
                 <h3 className="font-medium text-xl py-3">Scalable Growth</h3>
                 <p className="text-gray-600 text-lg text-justify">

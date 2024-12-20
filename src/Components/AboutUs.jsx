@@ -1,32 +1,10 @@
-import { useEffect, useState } from "react";
-import wed_service from "../assets/web-service-bg.png";
-import { Link } from "react-router-dom";
+import { TbDeviceDesktopCog } from "react-icons/tb";
+import { FaPeopleGroup } from "react-icons/fa6";
+import wed_service from "../assets/aboutimg.png";
 
 const AboutUs = () => {
-  const [customers, setCustomers] = useState(0);
-  const [emails, setEmails] = useState(0);
-  const [projects, setProjects] = useState(0);
-
-  const incrementCounter = (setValue, targetValue) => {
-    let count = 0;
-    const increment = setInterval(() => {
-      if (count < targetValue) {
-        count += Math.ceil(targetValue / 100); 
-        setValue(Math.min(count, targetValue));
-      } else {
-        clearInterval(increment);
-      }
-    }, 20);
-  };
-
-  useEffect(() => {
-    incrementCounter(setCustomers, 100); 
-    incrementCounter(setEmails, 2000); 
-    incrementCounter(setProjects, 500);
-  }, []);
-
   return (
-    <div className="mx-auto w-full bg-gray-100  max-w-screen-2xl px-5 py-16 lg:px-20 md:py-20 group">
+    <div className="mx-auto w-full bg-gray-50  max-w-screen-2xl px-5 py-16 lg:px-20 md:py-20">
       <div className="flex flex-col items-start text-center gap-5 mb-4">
         <div className="flex items-start justify-center flex-col">
           <h2
@@ -36,54 +14,57 @@ const AboutUs = () => {
           >
             Get to Know Us
           </h2>
-          <div className="lg:w-0 w-40 lg:group-hover:w-40 transition-all mt-4 duration-500 h-[5px] bg-[#006CB7] rounded"></div>
+          <div className="w-40 mt-4 h-[5px] bg-[#006CB7] rounded"></div>
         </div>
       </div>
-      <div className="grid items-center justify-items-start gap-8 sm:gap-20 lg:grid-cols-2">
-        <div className="flex flex-col" data-aos="zoom-in-right">
-          {/* Hero Title */}
-          <h1 className="mb-4 text-4xl font-bold md:text-6xl">
+      <div className="grid lg:grid-cols-2 gap-10 lg:gap-20 grid-cols-1 items-center">
+        <div className="flex flex-col gap-5">
+          <h1 className="mb-4 text-4xl font-semibold md:text-6xl">
             Your Vision, Our Expertise, Perfectly Crafted.
           </h1>
-          <p className="mb-6 max-w-2xl text-sm text-gray-500 sm:text-[18px] md:mb-10 lg:mb-12 text-justify leading-normal">
-            Keyan Technologies specializes in Web Development, App Development,
-            and Software Development. We deliver innovative digital solutions,
-            from responsive websites and mobile apps to creative visuals,
-            helping businesses thrive online. Our goal is to bring your ideas to
-            life with cutting-edge technology and design.
-          </p>
-          {/* Hero Info */}
-          <div className="grid w-full max-w-2xl grid-flow-row grid-cols-3 gap-4">
-            <div>
-              <h3 className="text-2xl font-bold md:text-3xl">{customers}+</h3>
-              <p className="text-sm text-gray-500">Client's</p>
+          <p className="mb-6 max-w-2xl text-sm text-gray-500 sm:text-[18px] md:mb-10 lg:mb-12 text-justify leading-normal">Keyan Technologies specializes in Web, App, and Software Development, delivering innovative solutions like responsive websites, mobile apps, and creative visuals to help businesses thrive online. We turn your ideas into reality with cutting-edge technology and design.</p>
+          <div className="flex lg:flex-row flex-col gap-5 relative">
+            <div
+              className="p-8 border space-y-2 cursor-pointer rounded shadow-lg group relative"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+            >
+              <div className="absolute top-[-35px] bg-[#006CB7] transition-all duration-300 p-5 rounded-full group-hover:bg-white border border-[#006CB7]">
+                <FaPeopleGroup className="text-2xl text-white transition-all duration-300 group-hover:text-[#006CB7]" />
+              </div>
+              <h2 className="font-bold text-xl group-hover:text-[#006CB7]">
+                Free Consultation
+              </h2>
+              <p className="group-hover:text-[#006CB7]">
+                Book your Free Consultation now for expert advice
+              </p>
             </div>
-            <div>
-              <h3 className="text-2xl font-bold md:text-3xl">{emails}+</h3>
-              <p className="text-sm text-gray-500">Emails</p>
+            <div
+              className="p-8 border space-y-2 cursor-pointer rounded shadow-lg group relative"
+              data-aos="fade-up"
+              data-aos-duration="2000"
+            >
+              <div className="absolute top-[-35px] bg-[#006CB7] transition-all duration-300 p-5 rounded-full group-hover:bg-white border border-[#006CB7]">
+                <TbDeviceDesktopCog className="text-2xl text-white transition-all duration-300 group-hover:text-[#006CB7]" />
+              </div>
+              <h2 className="font-bold text-xl group-hover:text-[#006CB7]">
+                Quality Service
+              </h2>
+              <p className="group-hover:text-[#006CB7]">
+              Providing reliable, top-quality solutions tailored to your needs.
+              </p>
             </div>
-            <div>
-              <h3 className="text-2xl font-bold md:text-3xl">{projects}+</h3>
-              <p className="text-sm text-gray-500">Projects</p>
-            </div>
-          </div>
-          <div>
-            <Link to={"/about"}>
-              {" "}
-              <button className="px-10 py-4 rounded-md hover:bg-transparent hover:text-[#006CB7] border border-[#006CB7] duration-300 transition-all bg-[#006CB7] text-center font-semibold text-white mt-8">
-                More Info
-              </button>
-            </Link>
           </div>
         </div>
-        {/* Hero Image */}
-        <img
-          src={wed_service}
-          alt="Web Service"
-          className="inline-block h-full rounded-lg w-full max-w-2xl"
-          data-aos="zoom-in"
-          data-aos-duration="2000"
-        />
+        <div>
+          <img
+            src={wed_service}
+            alt="Web Service"
+            className="inline-block h-full rounded-lg w-full max-w-2xl"
+            data-aos="zoom-in"
+            data-aos-duration="2000"
+          />
+        </div>
       </div>
     </div>
   );

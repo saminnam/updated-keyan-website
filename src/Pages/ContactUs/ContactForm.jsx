@@ -76,8 +76,6 @@ const ContactForm = () => {
           console.error("Error saving contact", error);
           alert("There was an error submitting the form. Please try again.");
         });
-    } else {
-      alert("Please fix the errors in the form.");
     }
   };
 

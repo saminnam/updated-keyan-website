@@ -46,7 +46,7 @@ const BlogsPage = () => {
   return (
     <>
       <GlobalTitle title={"BLOGS"} />
-      <section className="py-10 bg-white sm:py-16 lg:py-24 group">
+      <section className="py-10 bg-white sm:py-16 lg:py-24">
         <div className="px-4 mx-auto sm:px-6 lg:px-20 max-w-screen-2xl">
           <div className="max-w-2xl mx-auto text-center">
             <h2
@@ -56,7 +56,7 @@ const BlogsPage = () => {
             >
               Latest from the Blog
             </h2>
-            <div className="lg:w-0 w-72 lg:group-hover:w-72 transition-all duration-500 mx-auto mt-4 h-[5px] bg-[#006CB7] rounded"></div>
+            <div className="w-72 mx-auto mt-4 h-[5px] bg-[#006CB7] rounded"></div>
             <p className="max-w-xl mx-auto mt-4 text-base leading-relaxed text-gray-600">
               Discover the latest trends and tips in software technology and
               development.
@@ -65,14 +65,14 @@ const BlogsPage = () => {
           {error ? (
             <p className="text-center mt-5">Loading Blogs...</p>
           ) : (
-            <div className="flex flex-col mt-12 lg:mt-16 lg:flex-row lg:flex-wrap justify-between">
+            <div className="flex flex-wrap lg:flex-row justify-between mt-16 flex-col">
               {currentBlogs.map((post) => (
                 <div
                   key={post.id}
                   data-aos="fade-up"
                   data-aos-easing="linear"
                   data-aos-duration="1500"
-                  className="w-[400px] mb-12"
+                  className="lg:w-[400px] border p-5 group w-full mb-12"
                 >
                   <Link
                     to={`/blogs/${post.id}`}
@@ -81,7 +81,7 @@ const BlogsPage = () => {
                     className="block aspect-w-4 aspect-h-3"
                   >
                     <img
-                      className="object-cover w-full h-[250px]"
+                      className="object-cover w-full h-[250px] group-hover:scale-105 transition-all duration-300 ease-linear"
                       src={`http://localhost:3000/Images/${post.image}`}
                       alt={post.title}
                     />
@@ -95,7 +95,7 @@ const BlogsPage = () => {
                   >
                     {post.category}
                   </span>
-                  <p className="mt-6 text-xl font-semibold">
+                  <p className="mt-4 text-xl font-semibold">
                     <Link
                       to={`/blogs/${post.id}`}
                       state={{ blogPost: post }}

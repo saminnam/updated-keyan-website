@@ -1,13 +1,13 @@
-import ContactActions from "../Components/ContactActions";
-import GlobalTitle from "../Components/GlobalTitle";
-import ContactForm from "./ContactFrom";
+import ContactActions from "../../Components/ContactActions";
+import GlobalTitle from "../../Components/GlobalTitle";
+
+import ContactForm from "./ContactForm";
 
 const ContactPage = () => {
-  
   return (
     <section>
       <GlobalTitle title={"CONTACT US"} />
-      <ContactActions/>
+      <ContactActions />
       <div className="w-full bg-gray-50 py-10">
         <div className="mx-auto w-full max-w-7xl px-5 py-16 md:px-10 md:py-2 md:my-24">
           <div className="grid items-center gap-8 sm:gap-20 lg:grid-cols-2">
